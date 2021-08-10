@@ -21,10 +21,11 @@
 
 ## plansテーブル
 | column        | type        | options                       |
+| name          | text        | null:false                    |
 | user_id       | references  | null:false, foreign_key: true |
 | description   | text        | null:false                    |
-| genre_id      | references  | null:false                    |
-| budget_id     | references  | null:false                    |
+| genre_id      | integer     | null:false                    |
+| budget_id     | integer     | null:false                    |
 | location_id   | integer     |                               |
 | time_id       | integer     | null:false                    |
 

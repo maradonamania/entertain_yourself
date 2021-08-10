@@ -1,0 +1,113 @@
+<h1>計画編集ページ</h1>
+<div class="plans-sell-contents">
+  <header class="plan-sell-header">
+    <%# <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %> %>
+  </header>
+  <div class="plans-sell-main">
+    <h2 class="plans-sell-title">計画の情報を入力</h2>
+    <%= form_with model: @plan,local: true do |f| %>
+
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+
+    <%# 計画画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        計画参照画像
+        <span class="indispensable">任意</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"plan-image" %>
+      </div>
+    </div>
+    <%# /計画画像 %>
+    <%# 計画名と計画説明 %>
+    <div class="new-plans">
+      <div class="weight-bold-text">
+        計画名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"plans-text", id:"plan-name", placeholder:"計画名（必須 40文字まで)", maxlength:"40" %>
+      <div class="plans-explain">
+        <div class="weight-bold-text">
+          計画の説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :description, class:"plans-text", id:"plan-info", placeholder:"計画の説明（必須 1,000文字まで）（場所、店、景色など）例）何々駅から徒歩１０分。何色の看板が目印の公園です。駅前ロータリーよりバスも出ています。休憩所も多く一人での利用者が多く過ごしやすいです。コインロッカーや簡易シャワーもあり、ランステとして利用可能です。" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+    <%# /計画名と計画説明 %>
+
+    <%# 計画の詳細 %>
+    <div class="plans-detail">
+      <div class="weight-bold-text">計画の詳細</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          ジャンル
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"plan-genre"}) %>
+        <div class="weight-bold-text">
+          予算
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:budget_id, Budget.all, :id, :name, {}, {class:"select-box", id:"plan-sales-status"}) %>
+        <div class="weight-bold-text">
+          場所
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:location_id, Location.all, :id, :name, {}, {class:"select-box", id:"plan-sales-status"}) %>
+      </div>
+      <div class="weight-bold-text">
+          目安時間
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:expected_time_id, ExpectedTime.all, :id, :name, {}, {class:"select-box", id:"plan-sales-status"}) %>
+    </div>
+    <%# /計画の詳細 %>
+
+
+    <%# 注意書き %>
+    <div class="caution">
+      <p class="sentence">
+        <a href="#">禁止されている出品、</a>
+        <a href="#">行為</a>
+        を必ずご確認ください。
+      </p>
+      <p class="sentence">
+        またブランド品でシリアルナンバー等がある場合はご記載ください。
+        <a href="#">偽ブランドの販売</a>
+        は犯罪であり処罰される可能性があります。
+      </p>
+      <p class="sentence">
+        また、出品をもちまして
+        <a href="#">加盟店規約</a>
+        に同意したことになります。
+      </p>
+    </div>
+    <%# /注意書き %>
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "変更する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', plan_path(@plan), class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+  <footer class="items-sell-footer">
+    <ul class="menu">
+      <li><a href="#">プライバシーポリシー</a></li>
+      <li><a href="#">フリマ利用規約</a></li>
+      <li><a href="#">特定商取引に関する表記</a></li>
+    </ul>
+    <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
+    <p class="inc">
+      ©︎Furima,Inc.
+    </p>
+  </footer>
+</div>

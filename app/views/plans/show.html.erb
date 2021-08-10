@@ -1,0 +1,72 @@
+<h1>計画詳細ページ</h1>
+<div class="plan-show">
+  <div class="plan-box">
+    <h2 class="name">
+      <%= @plan.name %>
+    </h2>
+    <div class="plan-img-content">
+      <%= image_tag @plan.image ,class:"plan-box-img" %>
+
+    </div>
+    <div class="plan-price-box">
+      <span class="plan-price">
+        <%= "#{@plan.budget.name}円" %>
+      </span>
+      <span class="plan-postage">
+        <%= @plan.expected_time.name %>
+      </span>
+    </div>
+
+
+    <% if user_signed_in? %>
+    <% if current_user.id == @plan.user_id %>
+
+    <%= link_to "計画の編集", edit_plan_path(@plan.id), method: :get, class: "plan-red-btn" %>
+    <p class="or-text">or</p>
+    <%= link_to "削除", plan_path(@plan.id), method: :delete, class:"plan-destroy" %>
+
+    <%# <% else %> %>
+
+    <%# <%= link_to "購入画面に進む", item_orders_path(@item.id) ,class:"item-red-btn"%> %>
+    <% end %>
+
+    <% end %>
+
+    <div class="plan-explain-box">
+      <span><%= @plan.description %></span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-plan">提案者</th>
+          <td class="detail-value"><%= @plan.user.nickname %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">ジャンル</th>
+          <td class="detail-value"><%= @plan.genre.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">予算</th>
+          <td class="detail-value"><%= @plan.budget.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">場所</th>
+          <td class="detail-value"><%= @plan.location.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">目安時間</th>
+          <td class="detail-value"><%= @plan.expected_time.name %></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="option">
+      <div class="favorite-btn">
+        <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
+        <span>お気に入り 0</span>
+      </div>
+      <div class="report-btn">
+        <%= image_tag "flag.png" ,class:"report-flag-icon" ,width:"20",height:"20"%>
+        <span>不適切な商品の通報</span>
+      </div>
+    </div>
+  </div>
