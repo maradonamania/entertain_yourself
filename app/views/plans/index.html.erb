@@ -1,1 +1,60 @@
 <h1>トップページ</h1>
+  <%# 計画一覧 %>
+<div class='plan-contents'>
+  <h2 class='title'>ピックアップカテゴリー</h2>
+  <div class="subtitle" >
+    新規投稿計画
+  </div>
+  <ul class='plan-lists'>
+    
+    <% if @plans.present? %>
+      <% @plans.each do |plan|%>
+      <li class='list'>
+        <%= link_to plan_path(plan) do %>
+        <div class='item-img-content'>
+          <%= image_tag plan.image, alt:"plan_image",class: "plan-img" %>       
+        </div>
+        <div class='plan-info'>
+          <h3 class='plan-name'>
+            <%= plan.name %>
+          </h3>
+          <div class='plan-price'>
+            <span>予算<%= plan.budget.name %><br><%= plan.expected_time.name %></span>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+    
+    <% else %>
+    
+    <li class='list'>
+      <%= link_to '#' do %>
+      <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "item-img" %>
+      <div class='plan-info'>
+        <h3 class='plan-name'>
+          面白い計画を共有しよう！
+        </h3>
+        <div class='plan-price'>
+          <span>予算1000円以下<br>（ジョギング）</span>
+          <div class='star-btn'>
+            <%= image_tag "star.png", class:"star-icon" %>
+            <span class='star-count'>0</span>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </li>
+  
+    <% end %>
+  </ul>
+</div>
+
+<%= link_to(new_plan_path, class: 'submit-btn') do %>
+  <span class='submit-btn-text'>提案する</span>
+  <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "submit-btn-icon" %>
+<% end %>
