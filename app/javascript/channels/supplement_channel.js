@@ -10,6 +10,18 @@ consumer.subscriptions.create("SupplementChannel", {
   },
 
   received(data) {
-    // Called when there's incoming data on the websocket for this channel
+    const jsondata = JSON.parse(data.content)
+    console.log(jsondata)
+    console.log(data)
+    const html = `
+                 <p>${jsondata.description}</p>
+                 <p>${jsondata.location.attributes.name}</p>
+                 <p>${jsondata.genre.attributes.name}</p>
+                 <p>by ${jsondata.user.nickname}</p>           
+                 `;
+    const supplements = document.getElementById('supplements');
+    const newSupplement = document.getElementById('supplements-area');
+    supplements.insertAdjacentHTML('afterbegin', html);
+    newSupplement.value='';
   }
 });

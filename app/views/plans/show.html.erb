@@ -74,15 +74,15 @@
     <%=form_with model: [@plan,@supplement] ,url:plan_supplements_path(@plan.id), class:"supplement-form" do |f| %>
     <div class="weight-bold-text">
     提案詳細
-      <%=f.text_area :description, class:"supplement-text", id:"message-area"%>
+      <%=f.text_area :description, class:"supplement-text", id:"supplements-area"%>
     </div>
     <div class="weight-bold-text">
     ジャンル
-      <%=f.collection_select(:genre_id,Genre.all,:id,:name,{},{class:"select-box",id:"supplement-genre"})%>
+      <%=f.collection_select(:genre_id,Genre.all,:id,:name,{},{class:"select-box",id:"supplement-area"})%>
     </div>
     <div class="weight-bold-text">
     場所
-      <%=f.collection_select(:location_id,Location.all,:id,:name,{},{class:"select-box",id:"supplement-location"})%>
+      <%=f.collection_select(:location_id,Location.all,:id,:name,{},{class:"select-box",id:"supplement-area"})%>
     </div>
       <p class="comment-warn">
         ※相手のことを考え丁寧なコメントを心がけましょう。
@@ -91,12 +91,14 @@
       </p>
       <%=f.submit "補足提案する",class:"supplement-btn", id:"button"%>
     <% end %>
-      <div id='supplements'>
+    <div id='supplements'>
     <% @supplements.reverse_each do |supplement| %>
       <p>『<%= supplement.description %>』</p>
       <p>代替場所：<%= supplement.location.name %></p>
       <p>ジャンル：<%= supplement.genre.name %></p>
       <p>by <%= supplement.user.nickname %></p>
+    -------------------------------------------------------------------------
     <% end %>
+    </div>
   </div>
-  </div>
+</div>

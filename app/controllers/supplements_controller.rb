@@ -1,9 +1,11 @@
 class SupplementsController < ApplicationController
 
   def create
+    @user = User.find_by(id: current_user.id)
     @supplement = Supplement.new(supplement_params)
     if @supplement.save
-      redirect_to root_path
+      ActionCable.server.broadcast 'supplement_channel',
+      content: @supplement.to_json(include:{user:{}},methods: [:location,:genre])
     end
   end
 
