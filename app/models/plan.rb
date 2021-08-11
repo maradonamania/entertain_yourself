@@ -6,6 +6,7 @@ class Plan < ApplicationRecord
   belongs_to_active_hash :expected_time
   has_one_attached :image
   belongs_to :user
+  has_many :supplements
 
   with_options presence: true do
     validates :name
