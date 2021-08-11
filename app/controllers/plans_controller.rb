@@ -21,6 +21,8 @@ class PlansController < ApplicationController
   end
 
   def show
+    @supplement = Supplement.new
+    @supplements = @plan.supplements.includes(:user)
   end
 
   def edit

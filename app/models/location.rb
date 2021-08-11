@@ -19,4 +19,5 @@ class Location < ActiveHash::Base
   ]
   include ActiveHash::Associations
   has_many :plans
+  has_many :supplements
 end

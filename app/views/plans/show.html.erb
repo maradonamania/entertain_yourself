@@ -66,7 +66,37 @@
       </div>
       <div class="report-btn">
         <%= image_tag "flag.png" ,class:"report-flag-icon" ,width:"20",height:"20"%>
-        <span>不適切な商品の通報</span>
+        <span>この提案に対しての代替案または補足提案</span>
       </div>
     </div>
+  </div>
+   <div class="comment-box">
+    <%=form_with model: [@plan,@supplement] ,url:plan_supplements_path(@plan.id), class:"supplement-form" do |f| %>
+    <div class="weight-bold-text">
+    提案詳細
+      <%=f.text_area :description, class:"supplement-text", id:"message-area"%>
+    </div>
+    <div class="weight-bold-text">
+    ジャンル
+      <%=f.collection_select(:genre_id,Genre.all,:id,:name,{},{class:"select-box",id:"supplement-genre"})%>
+    </div>
+    <div class="weight-bold-text">
+    場所
+      <%=f.collection_select(:location_id,Location.all,:id,:name,{},{class:"select-box",id:"supplement-location"})%>
+    </div>
+      <p class="comment-warn">
+        ※相手のことを考え丁寧なコメントを心がけましょう。
+        <br>
+        不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      </p>
+      <%=f.submit "補足提案する",class:"supplement-btn", id:"button"%>
+    <% end %>
+      <div id='supplements'>
+    <% @supplements.reverse_each do |supplement| %>
+      <p>『<%= supplement.description %>』</p>
+      <p>代替場所：<%= supplement.location.name %></p>
+      <p>ジャンル：<%= supplement.genre.name %></p>
+      <p>by <%= supplement.user.nickname %></p>
+    <% end %>
+  </div>
   </div>
