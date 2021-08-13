@@ -17,7 +17,8 @@ consumer.subscriptions.create("SupplementChannel", {
                  <p>${jsondata.description}</p>
                  <p>${jsondata.location.attributes.name}</p>
                  <p>${jsondata.genre.attributes.name}</p>
-                 <p>by ${jsondata.user.nickname}</p>           
+                 <p>by ${jsondata.user.nickname}</p>
+                 ------------------------------------           
                  `;
     const supplements = document.getElementById('supplements');
     const newSupplement = document.getElementById('supplements-area');

@@ -1,0 +1,13 @@
+<div class="contents row">
+  
+  <p class="current-user-name"><%= @nickname %>さんの投稿一覧</p>
+  <% @plans.each do |plan| %>
+    <div class="content_post">
+      <span class="name"><%= plan.name %></span>
+      <%= image_tag plan.image, class:"current-user-image" if plan.image.attached? %>
+      <p class="contents-detail"><%= plan.description %></p>
+      <p class="contents-detail genre"><%= plan.genre.name %></P>
+      <p class="contents-detail location"><%= plan.location.name%></P>
+    </div>
+  <% end %>
+</div>
