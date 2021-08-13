@@ -1,0 +1,40 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.content_post{
+  background-color: lightgray;
+  border-radius: 5px;
+  width: 80vw;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+}
+.name{
+  color: black;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+.contents-detail{
+  border: 1px solid white;
+}
+.genre{
+  text-align: center;
+}
+.location{
+  text-align: center;
+}
+.current-user-name{
+  color: white;
+  background-color: #3CCACE;
+  font-weight: bold;
+  font-size: x-large;
+  text-align: center;
+}
+.current-user-image{
+  width: 33vh;
+  height: 33vh;
+  border-radius: 5px;
+  background-color: rgb(205, 202, 202);
+  object-fit: contain;
+}

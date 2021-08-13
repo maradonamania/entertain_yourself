@@ -1,4 +1,4 @@
-<h1>計画詳細ページ</h1>
+<%= render "shared/header" %>
 <div class="plan-show">
   <div class="plan-box">
     <h2 class="name">
@@ -21,13 +21,10 @@
     <% if user_signed_in? %>
     <% if current_user.id == @plan.user_id %>
 
-    <%= link_to "計画の編集", edit_plan_path(@plan.id), method: :get, class: "plan-red-btn" %>
+    <%= link_to "提案を編集", edit_plan_path(@plan.id), method: :get, class: "plan-red-btn" %>
     <p class="or-text">or</p>
-    <%= link_to "削除", plan_path(@plan.id), method: :delete, class:"plan-destroy" %>
+    <%= link_to "提案を削除", plan_path(@plan.id), method: :delete, class:"plan-destroy" %>
 
-    <%# <% else %> %>
-
-    <%# <%= link_to "購入画面に進む", item_orders_path(@item.id) ,class:"item-red-btn"%> %>
     <% end %>
 
     <% end %>
@@ -42,35 +39,31 @@
           <td class="detail-value"><%= @plan.user.nickname %></td>
         </tr>
         <tr>
-          <th class="detail-item">ジャンル</th>
+          <th class="detail-plan">ジャンル</th>
           <td class="detail-value"><%= @plan.genre.name %></td>
         </tr>
         <tr>
-          <th class="detail-item">予算</th>
+          <th class="detail-plan">予算</th>
           <td class="detail-value"><%= @plan.budget.name %></td>
         </tr>
         <tr>
-          <th class="detail-item">場所</th>
+          <th class="detail-plan">場所</th>
           <td class="detail-value"><%= @plan.location.name %></td>
         </tr>
         <tr>
-          <th class="detail-item">目安時間</th>
+          <th class="detail-plan">目安時間</th>
           <td class="detail-value"><%= @plan.expected_time.name %></td>
         </tr>
       </tbody>
     </table>
     <div class="option">
       <div class="favorite-btn">
-        <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
+        <%= image_tag "likes-icon.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
         <span>お気に入り 0</span>
-      </div>
-      <div class="report-btn">
-        <%= image_tag "flag.png" ,class:"report-flag-icon" ,width:"20",height:"20"%>
-        <span>この提案に対しての代替案または補足提案</span>
       </div>
     </div>
   </div>
-   <div class="comment-box">
+   <div class="supplement-box">
     <%=form_with model: [@plan,@supplement] ,url:plan_supplements_path(@plan.id), class:"supplement-form" do |f| %>
     <div class="weight-bold-text">
     提案詳細
@@ -97,7 +90,7 @@
       <p>代替場所：<%= supplement.location.name %></p>
       <p>ジャンル：<%= supplement.genre.name %></p>
       <p>by <%= supplement.user.nickname %></p>
-    -------------------------------------------------------------------------
+    -------------------------------------------------
     <% end %>
     </div>
   </div>

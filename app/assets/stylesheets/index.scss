@@ -1,0 +1,124 @@
+
+
+/* 商品一覧 */
+
+.plan-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.plan-contents>.title {
+  color: #FF8C00;
+  background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 7vh;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.plan-contents>.subtitle {
+  font-size: 3vh;
+  margin: 1vh 0;
+  text-decoration: none;
+  color: #3ccace;
+  font-weight: bold;
+}
+
+.plan-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.plan-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+
+
+.plan-img-content {
+  position: relative;
+}
+
+.plan-img {
+  width: 33vh;
+  height: 33vh;
+  border-radius: 5px;
+}
+
+
+.plan-info {
+  background-color:lightgray;
+  color: black;
+  padding: 1vw;
+  border-radius: 5px;
+}
+
+.plan-name {
+  font-size: 2.5vh;
+  border-box: 1px solid ;
+}
+
+.item-budget {
+  font-size: 1.5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.star-btn {
+  display: flex;
+  align-items: center;
+}
+
+.star-icon {
+  height: 2vh;
+  width: 2vh;
+  margin-right: 0.5vw;
+}
+
+.star-count {
+  font-size: 2vh;
+}
+
+/* //商品一覧 */
+.store-btn {
+  display: flex;
+  margin-top: 24px;
+}
+
+.apple-btn {
+  margin-right: 1vw;
+  height: 9vh;
+}
+
+.google-btn {
+  height: 9vh;
+}
+.submit-btn{
+  width: 120px;
+  background: #3ccace;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+  text-decoration: none;
+}
+.submit-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.submit-btn-icon {
+  width: 80%;
+}
