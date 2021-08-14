@@ -2,6 +2,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :plans
+  has_many :likes
+  def already_liked?(plan)
+    self.likes.exists?(plan_id: plan.id)
+  end
 
   with_options presence: true do
     validates :nickname

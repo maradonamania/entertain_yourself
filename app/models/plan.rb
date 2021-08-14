@@ -7,6 +7,7 @@ class Plan < ApplicationRecord
   has_one_attached :image
   belongs_to :user
   has_many :supplements
+  has_many :likes
 
   with_options presence: true do
     validates :name

@@ -25,8 +25,8 @@
           <div class='plan-price'>
             <span>予算<%= plan.budget.name %><br><%= plan.expected_time.name %></span>
             <div class='star-btn'>
-              <%= image_tag "star.png", class:"star-icon" %>
-              <span class='star-count'>0</span>
+              <%= image_tag "star3.png", class:"star-icon" %>
+              <span class='star-count'><%= plan.likes.count %></span>
             </div>
           </div>
         </div>
