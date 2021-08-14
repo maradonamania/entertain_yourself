@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_params,only: [:show,:edit,:update]
+  before_action :set_params, only: [:show, :edit, :update]
   def show
     @plans = @user.plans
   end
@@ -17,11 +17,12 @@ class UsersController < ApplicationController
   end
 
   private
+
   def set_params
     @user = User.find(params[:id])
   end
 
   def user_params
-    params.require(:user).permit(:nickname,:email,:password)
+    params.require(:user).permit(:nickname, :email, :password)
   end
 end

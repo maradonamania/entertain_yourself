@@ -22,7 +22,7 @@ RSpec.describe Plan, type: :model do
         expect(@plan.errors.full_messages).to include("Name can't be blank")
       end
       it 'descriptionが空だと保存できない' do
-        @plan.description = ""
+        @plan.description = ''
         @plan.valid?
         expect(@plan.errors.full_messages).to include("Description can't be blank")
       end

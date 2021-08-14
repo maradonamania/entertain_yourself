@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   describe 'ユーザー新規登録' do
-      before do
-        @user = FactoryBot.build(:user)
-      end
-    
+    before do
+      @user = FactoryBot.build(:user)
+    end
+
     context '内容に問題ない場合' do
       it 'すべての情報があれば登録できる' do
         expect(@user).to be_valid
@@ -14,12 +14,12 @@ RSpec.describe User, type: :model do
 
     context '内容に問題がある場合' do
       it 'nicknameが空の場合保存できない' do
-        @user.nickname = ""
+        @user.nickname = ''
         @user.valid?
         expect(@user.errors.full_messages).to include("Nickname can't be blank")
       end
       it 'emailが空だと保存できないこと' do
-        @user.email = ""
+        @user.email = ''
         @user.valid?
         expect(@user.errors.full_messages).to include("Email can't be blank")
       end
@@ -28,12 +28,12 @@ RSpec.describe User, type: :model do
         another_user = FactoryBot.build(:user)
         another_user.email = @user.email
         another_user.valid?
-        expect(another_user.errors.full_messages).to include("Email has already been taken")
+        expect(another_user.errors.full_messages).to include('Email has already been taken')
       end
       it 'emailが@を含まないと保存できないこと' do
         @user.email = 'testsample1'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Email is invalid")
+        expect(@user.errors.full_messages).to include('Email is invalid')
       end
       it 'passwordが空だと保存できないこと' do
         @user.password = ''

@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :plan do
-    name                   {'休日、holiday,ホリデー'}
+    name                   { '休日、holiday,ホリデー' }
     description            { Faker::Lorem.sentence }
     genre_id               { 1 }
     budget_id              { 2 }

@@ -11,7 +11,7 @@ class Plan < ApplicationRecord
   with_options presence: true do
     validates :name
     validates :description
-    with_options numericality: { other_than: 0, message:"can't be blank"} do
+    with_options numericality: { other_than: 0, message: "can't be blank" } do
       validates :genre_id
       validates :budget_id
       validates :location_id
