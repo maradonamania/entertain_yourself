@@ -38,3 +38,12 @@
   background-color: rgb(205, 202, 202);
   object-fit: contain;
 }
+.current-user-edit{
+  color: white;
+  background: linear-gradient( to right,  rgba(69,179,224,1) 25%, rgba(102,51,153,1) 75% );
+  font-weight: bold;
+  font-size: x-large;
+  text-align: center;
+  display: block;
+  border-top: 2px solid white;
+}

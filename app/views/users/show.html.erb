@@ -1,6 +1,7 @@
+<%= render "shared/header" %>
 <div class="contents row">
-  
-  <p class="current-user-name"><%= @nickname %>さんの投稿一覧</p>
+  <p class="current-user-name"><%= @user.nickname %>さんの投稿一覧</p>
+  <%= link_to "#{@user.nickname}さんのユーザー情報を編集する",edit_user_path(@user.id),class:"current-user-edit" %>
   <% @plans.each do |plan| %>
     <div class="content_post">
       <span class="name"><%= plan.name %></span>

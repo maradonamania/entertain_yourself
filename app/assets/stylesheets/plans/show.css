@@ -61,7 +61,9 @@
 }
 
 .plan-explain-box {
+  font-weight: bold;
   font-size: 18px;
+  padding: 2px;
   margin: 40px 0px;
   overflow-wrap: anywhere;
   border: 1px solid lightgray;

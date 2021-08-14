@@ -15,7 +15,7 @@
         <%if plan.image.attached?%>
           <%= image_tag plan.image,class: "plan-img" %>
         <% else %>
-          <%= image_tag "camera-logo.png", class:"plan-img" %>
+          <%= link_to image_tag("camera-logo.png",class:"plan-img"),"plans/#{plan.id}" %>
         <% end %>      
         </div>
         <div class='plan-info'>

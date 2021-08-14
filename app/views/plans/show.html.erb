@@ -5,8 +5,11 @@
       <%= @plan.name %>
     </h2>
     <div class="plan-img-content">
+    <% if @plan.image.attached?%>
       <%= image_tag @plan.image ,class:"plan-box-img" %>
-
+    <% else %>
+      <%= image_tag "camera-logo.png",class: "plan-img" %>
+    <% end %>
     </div>
     <div class="plan-price-box">
       <span class="plan-price">
