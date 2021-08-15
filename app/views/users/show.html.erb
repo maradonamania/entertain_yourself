@@ -4,11 +4,17 @@
   <%= link_to "#{@user.nickname}さんのユーザー情報を編集する",edit_user_path(@user.id),class:"current-user-edit" %>
   <% @plans.each do |plan| %>
     <div class="content_post">
-      <span class="name"><%= plan.name %></span>
-      <%= image_tag plan.image, class:"current-user-image" if plan.image.attached? %>
-      <p class="contents-detail"><%= plan.description %></p>
-      <p class="contents-detail genre"><%= plan.genre.name %></P>
-      <p class="contents-detail location"><%= plan.location.name%></P>
+      <span class="name">提案名：<%= plan.name %></span>
+      <ul class="current-user-image-box">
+      <% plan.images.each do |image| %>
+      <li>
+      <%= image_tag image, class:"current-user-image" if plan.images.attached? %>
+      </li>
+      <% end %>
+      </ul>
+      <p class="contents-detail">詳細：<%= plan.description %></p>
+      <p class="contents-detail genre">ジャンル：<%= plan.genre.name %></P>
+      <p class="contents-detail location">場所：<%= plan.location.name%></P>
     </div>
   <% end %>
 </div>

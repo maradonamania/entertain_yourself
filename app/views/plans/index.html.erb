@@ -1,9 +1,10 @@
 <%= render "shared/header" %>
   <%# 計画一覧 %>
+<p class="plan-index">新規提案一覧</p>
 <div class='plan-contents'>
   <h2 class='title'>充実の一人時間を提案</h2>
   <div class="subtitle" >
-    新規提案一覧
+    “Make each day your masterpiece.” 
   </div>
   <ul class='plan-lists'>
     
@@ -12,8 +13,8 @@
       <li class='list'>
         <%= link_to plan_path(plan) do %>
         <div class='item-img-content'>
-        <%if plan.image.attached?%>
-          <%= image_tag plan.image,class: "plan-img" %>
+        <%if plan.images.attached?%>
+          <%= image_tag plan.images[0],class: "plan-img" %>
         <% else %>
           <%= link_to image_tag("camera-logo.png",class:"plan-img"),"plans/#{plan.id}" %>
         <% end %>      

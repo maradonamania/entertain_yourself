@@ -1,9 +1,15 @@
+.plan-index{
+  color: white;
+  background: linear-gradient(#000046, #1cb5e0);
+  font-weight: bold;
+  font-size: x-large;
+  text-align: center;
+}
 
 
-/* 商品一覧 */
 
 .plan-contents {
-  background-color: #FFF;
+  background-image: url('06-white-cardboard.png');
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,10 +72,15 @@
   border-box: 1px solid ;
 }
 
-.item-budget {
-  font-size: 1.5vh;
-  display: flex;
-  justify-content: space-between;
+// .item-budget {
+//   font-size: 1.5vh;
+//   display: flex;
+//   justify-content: space-between;
+// }
+.item-img{
+  width: 33vh;
+  height: 33vh;
+  border-radius: 5px;
 }
 
 

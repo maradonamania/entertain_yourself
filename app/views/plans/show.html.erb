@@ -5,8 +5,10 @@
       <%= @plan.name %>
     </h2>
     <div class="plan-img-content">
-    <% if @plan.image.attached?%>
-      <%= image_tag @plan.image ,class:"plan-box-img" %>
+    <% if @plan.images.attached?%>
+    <% @plan.images.each do |image| %>
+      <%= image_tag image,class:"plan-box-img" %>
+    <% end %>
     <% else %>
       <%= image_tag "camera-logo.png",class: "plan-img" %>
     <% end %>
@@ -24,7 +26,8 @@
     <% if user_signed_in? %>
     <% if current_user.id == @plan.user_id %>
 
-    <%= link_to "提案を編集", edit_plan_path(@plan.id), method: :get, class: "plan-red-btn" %>
+    <%= link_to "提案を編集", edit_plan_path(@plan.id), method: :get, class: "plan-green-btn" %>
+    
     <%= link_to "提案を削除", plan_path(@plan.id), method: :delete, class:"plan-destroy" %>
 
     <% end %>

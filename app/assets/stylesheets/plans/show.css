@@ -29,13 +29,13 @@
   min-height: 500px;
   background-color: rgb(205, 202, 202);
   object-fit: contain;
-  border-radius: 5px;
+
 }
 
 
-.plan-red-btn {
+.plan-green-btn {
   text-align: center;
-  background-color: rgb(7, 107, 7);
+  background-image: linear-gradient(90deg, rgba(144, 245, 154, 1), rgba(4, 202, 255, 1));
   font-size: 24px;
   font-weight: bold;
   color: #FFF;
