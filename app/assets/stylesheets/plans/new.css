@@ -160,3 +160,23 @@ a{
   object-fit: contain;
   border-radius: 5px;
 }
+.back-btn {
+  width: 100%;
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.submit-btn-new{
+  width: 100%;
+  background-image: linear-gradient(90deg, rgba(144, 245, 154, 1), rgba(4, 202, 255, 1));
+  font-size: large;
+  font-weight: bold;
+  color: #FFF;
+  padding: 15px 40%;
+  text-decoration: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
