@@ -20,14 +20,9 @@
   background: linear-gradient(45deg, #54d0ff, #9f92ff 20%, #ff7689 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  // color: #FF8C00;
-  // background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
   font-size: 7vh;
   line-height: 1.4;
   font-weight: bold;
-  
 }
 
 .plan-contents>.subtitle {
@@ -73,12 +68,6 @@
 .plan-name {
   font-size: 2.5vh;
 }
-
-// .item-budget {
-//   font-size: 1.5vh;
-//   display: flex;
-//   justify-content: space-between;
-// }
 .item-img{
   width: 33vh;
   height: 33vh;
@@ -92,15 +81,14 @@
 }
 
 .star-icon {
-  height: 2vh;
-  width: 2vh;
+  height: 3vh;
+  width: 3vh;
   margin-right: 0.5vw;
 }
 
 .star-count {
-  font-size: 2vh;
+  font-size: 3vh;
 }
-
 /* //商品一覧 */
 .store-btn {
   display: flex;
@@ -117,7 +105,7 @@
 }
 .submit-btn{
   width: 120px;
-  background: #3ccace;
+  background: linear-gradient(to right, orange, deeppink, blueviolet, cyan);
   text-align: center;
   border-radius: 4%;
   bottom: 32px;
@@ -125,13 +113,19 @@
   position: fixed;
   padding: 15px;
   text-decoration: none;
+  border: 1px solid lightgray;
+  box-shadow:0 0 10px rgba(0, 0, 0, 0.9);
 }
 .submit-btn-text {
   color: #fff;
   display: block;
   font-size: 18px;
   margin-bottom: 5px;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1.0);
 }
 .submit-btn-icon {
   width: 80%;
+  border-radius: 5px;
+  border: 1px solid lightgray
 }
