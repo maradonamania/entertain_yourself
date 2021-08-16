@@ -16,13 +16,13 @@ RSpec.describe User, type: :model do
       it 'nicknameが空の場合保存できない' do
         @user.nickname = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("ニックネームを入力してください")
+        expect(@user.errors.full_messages).to include('ニックネームを入力してください')
       end
       it 'emailが空だと保存できないこと' do
         @user.email = ''
 
         @user.valid?
-        expect(@user.errors.full_messages).to include("Eメールを入力してください")
+        expect(@user.errors.full_messages).to include('Eメールを入力してください')
       end
       it 'emailが一意性でないと保存できないこと' do
         @user.save
@@ -39,7 +39,7 @@ RSpec.describe User, type: :model do
       it 'passwordが空だと保存できないこと' do
         @user.password = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワードを入力してください")
+        expect(@user.errors.full_messages).to include('パスワードを入力してください')
       end
       it 'passwordが５文字以下では保存できないこと' do
         @user.password = 'test1'
@@ -49,17 +49,17 @@ RSpec.describe User, type: :model do
       it '半角数字のみだと登録できない' do
         @user.password = '333333'
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワードは不正な値です")
+        expect(@user.errors.full_messages).to include('パスワードは不正な値です')
       end
       it '半角英字のみだと登録できない' do
         @user.password = 'aaaaaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワードは不正な値です")
+        expect(@user.errors.full_messages).to include('パスワードは不正な値です')
       end
       it 'passwordとpassword_confirmationの各値が一致しないと保存されないこと' do
         @user.password_confirmation = 'password1'
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワード（確認用）とパスワードの入力が一致しません")
+        expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません')
       end
     end
   end

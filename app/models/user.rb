@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :plans
   has_many :likes
   def already_liked?(plan)
-    self.likes.exists?(plan_id: plan.id)
+    likes.exists?(plan_id: plan.id)
   end
 
   with_options presence: true do

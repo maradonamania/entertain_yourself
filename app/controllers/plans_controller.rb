@@ -45,8 +45,8 @@ class PlansController < ApplicationController
   private
 
   def plan_params
-    params.require(:plan).permit( :name, :description, :genre_id, :expected_time_id, :location_id,
-                                 :budget_id,images:[]).merge(user_id: current_user.id)
+    params.require(:plan).permit(:name, :description, :genre_id, :expected_time_id, :location_id,
+                                 :budget_id, images: []).merge(user_id: current_user.id)
   end
 
   def move_to_index

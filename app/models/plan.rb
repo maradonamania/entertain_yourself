@@ -12,7 +12,7 @@ class Plan < ApplicationRecord
   with_options presence: true do
     validates :name
     validates :description
-    with_options numericality: { other_than: 0, message: "を入力してください" } do
+    with_options numericality: { other_than: 0, message: 'を入力してください' } do
       validates :genre_id
       validates :budget_id
       validates :location_id
