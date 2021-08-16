@@ -8,7 +8,7 @@ FactoryBot.define do
     expected_time_id       { 3 }
     association :user
     after(:build) do |plan|
-      plan.image.attach(io: File.open('public/images/cat-6525495_1920.jpg'), filename: 'cat-6525495_1920.jpg')
+      plan.images.attach(io: File.open('public/images/cat-6525495_1920.jpg'), filename: 'cat-6525495_1920.jpg')
     end
   end
 end
