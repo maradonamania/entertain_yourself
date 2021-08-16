@@ -1,0 +1,16 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+      plan:
+        name: 計画名
+        description: 詳細
+        image: 画像
+        genre_id: ジャンル
+        budget_id: 予算
+        location_id: 場所
+        expected_time_id: 時間
+    models:
+      plan: 計画
+
