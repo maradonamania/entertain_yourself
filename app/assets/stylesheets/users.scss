@@ -1,6 +1,7 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .content_post{
   background-color: lightgray;
   border-radius: 5px;
@@ -38,6 +39,7 @@
   background-color: rgb(205, 202, 202);
   object-fit: contain;
   margin: 0 5px 0;
+  background-image: url("wood.png");
 }
 .current-user-edit{
   color: white;
