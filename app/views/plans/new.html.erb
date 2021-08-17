@@ -20,9 +20,6 @@
           <%= f.file_field :images, name: 'plan[images][]', id:"plan-image",multiple: true %>
         </div>
         <div id="image-list"></div>
-        <% @plan.images.each do |image| %>
-        <%= image_tag image, class: 'images' %>
-        <% end %>
       </div>
       <%# /計画画像 %>
       <%# 計画名と計画説明 %>
