@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: entertain_yourself_production
-  username: entertain_yourself
-  password: <%= ENV['ENTERTAIN_YOURSELF_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
