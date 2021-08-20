@@ -1,13 +1,8 @@
 <%= render "shared/header" %>
-  <%# 計画一覧 %>
-<p class="plan-index">新規提案一覧</p>
-<div class='plan-contents'>
-  <h2 class='title'>充実の一人時間を提案</h2>
-  <div class="subtitle" >
-    “Make each day your masterpiece.” 
-  </div>
+<%# 検索一覧 %>
+<p class="plan-index">検索結果</p>
+<div class="plan-lists">
   <ul class='plan-lists'>
-    
     <% if @plans.present? %>
       <% @plans.each do |plan|%>
       <li class='list'>
@@ -36,16 +31,16 @@
       <% end %>
     
     <% else %>
-    
+
     <li class='list'>
       <%= link_to '#' do %>
       <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "item-img" %>
       <div class='plan-info'>
         <h3 class='plan-name'>
-          面白い計画を共有しよう！
+          該当する計画はありませんでした。
         </h3>
         <div class='plan-price'>
-          <span>予算1000円以下<br>(例)ジョギング</span>
+          <span><br></span>
           <div class='star-btn'>
             <%= image_tag "star5.png", class:"star-icon" %>
             <span class='star-count'>0</span>
@@ -63,4 +58,5 @@
   <span class='submit-btn-text'>提案する</span>
   <%= image_tag 'plan-submit-logo.png' , size: '185x50' ,class: "submit-btn-icon" %>
 <% end %>
+
 <%= render "shared/footer" %>

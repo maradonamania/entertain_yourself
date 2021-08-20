@@ -42,6 +42,10 @@ class PlansController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @plans = Plan.search(params[:keyword])
+  end
+
   private
 
   def plan_params
