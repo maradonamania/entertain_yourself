@@ -1,7 +1,62 @@
 <%= render "shared/header" %>
-<div class="contents row">
-  <% @plans.each do |plan| %>
-    <%= render partial: "plan", locals: { plan: plan } %>
-  <% end %>
+<%# 検索一覧 %>
+<p class="plan-index">検索結果</p>
+<div class="plan-lists">
+  <ul class='plan-lists'>
+    <% if @plans.present? %>
+      <% @plans.each do |plan|%>
+      <li class='list'>
+        <%= link_to plan_path(plan) do %>
+        <div class='item-img-content'>
+        <%if plan.images.attached?%>
+          <%= image_tag plan.images[0],class: "plan-img" %>
+        <% else %>
+          <%= link_to image_tag("camera-logo.png",class:"plan-img"),"plans/#{plan.id}" %>
+        <% end %>      
+        </div>
+        <div class='plan-info'>
+          <h3 class='plan-name'>
+            <%= plan.name %>
+          </h3>
+          <div class='plan-price'>
+            <span>予算<%= plan.budget.name %><br><%= plan.expected_time.name %></span>
+            <div class='star-btn'>
+              <%= image_tag "star5.png", class:"star-icon" %>
+              <span class='star-count'><%= plan.likes.count %></span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+    
+    <% else %>
+
+    <li class='list'>
+      <%= link_to '#' do %>
+      <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "item-img" %>
+      <div class='plan-info'>
+        <h3 class='plan-name'>
+          該当する計画はありませんでした。
+        </h3>
+        <div class='plan-price'>
+          <span><br></span>
+          <div class='star-btn'>
+            <%= image_tag "star5.png", class:"star-icon" %>
+            <span class='star-count'>0</span>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </li>
+  
+    <% end %>
+  </ul>
 </div>
+
+<%= link_to(new_plan_path, class: 'submit-btn') do %>
+  <span class='submit-btn-text'>提案する</span>
+  <%= image_tag 'plan-submit-logo.png' , size: '185x50' ,class: "submit-btn-icon" %>
+<% end %>
+
 <%= render "shared/footer" %>
