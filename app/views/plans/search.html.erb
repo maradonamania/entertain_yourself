@@ -1,0 +1,7 @@
+<%= render "shared/header" %>
+<div class="contents row">
+  <% @plans.each do |plan| %>
+    <%= render partial: "plan", locals: { plan: plan } %>
+  <% end %>
+</div>
+<%= render "shared/footer" %>
