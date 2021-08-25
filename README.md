@@ -1,7 +1,8 @@
 # README
 ## Entertain yourself
 # URL 
-52.192.10.151(AWS),https://entertain-yourself.herokuapp.com/(heroku)
+AWS:  52.192.10.151
+heroku:  https://entertain-yourself.herokuapp.com/
 # テスト用アカウント
 ユーザー１：test@sample, testpass1
 ユーザー２：test2@sample, testpass2
