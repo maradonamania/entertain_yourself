@@ -197,3 +197,12 @@
   width:  100%;
   border: 2px solid lightgray;
 }
+#map {
+  height: 40vh;
+  width: 50vw;
+  padding: auto;
+  margin-bottom: 10px;
+}
+.search-form,sub{
+ justify-content: center;
+}
