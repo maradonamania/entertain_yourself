@@ -40,6 +40,15 @@ ActiveRecord::Schema.define(version: 2021_08_14_062359) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "plan_tag_relations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "plan_id"
+    t.bigint "tag_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["plan_id"], name: "index_plan_tag_relations_on_plan_id"
+    t.index ["tag_id"], name: "index_plan_tag_relations_on_tag_id"
+  end
+
   create_table "plans", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.text "name", null: false
@@ -65,6 +74,12 @@ ActiveRecord::Schema.define(version: 2021_08_14_062359) do
     t.index ["user_id"], name: "index_supplements_on_user_id"
   end
 
+  create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "naming", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", null: false
     t.string "email", default: "", null: false
@@ -79,6 +94,8 @@ ActiveRecord::Schema.define(version: 2021_08_14_062359) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "plan_tag_relations", "plans"
+  add_foreign_key "plan_tag_relations", "tags"
   add_foreign_key "plans", "users"
   add_foreign_key "supplements", "plans"
   add_foreign_key "supplements", "users"
