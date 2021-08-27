@@ -20,17 +20,19 @@ ID:admin Pass:7777
 コロナ禍にあり、多人数で休日を過ごすことがなかなか難しくなってきた背景や、サービス業など平日休みで友人と予定が合わなく一人で過ごすことが多くなっているような人が、自分で自分の機嫌を取るように、一人でも楽しめる方法をシェアすることが時間の有効活用に繋がり、また人との繋がりにもなると考えたため。
 # DEMO
 ## TOP画面での閲覧（詳細はユーザー登録が必要です）
-https://gyazo.com/40fb97db7c055c67e5f3ad1dc1fee27e
+[![Image from Gyazo](https://i.gyazo.com/f7833fe766d4522a9a6d61ba3804f933.gif)](https://gyazo.com/f7833fe766d4522a9a6d61ba3804f933)
 ## 詳細画面への遷移
-https://gyazo.com/f5dc4fc1f83cf6d3356389a4ad3fcf06
+[![Image from Gyazo](https://i.gyazo.com/373880328e7ced2dc3f843392a488d20.gif)](https://gyazo.com/373880328e7ced2dc3f843392a488d20)
 ## 計画投稿画面への遷移
-https://gyazo.com/da72c7742a4cb114b5b0c98976fcd68d
+[![Image from Gyazo](https://i.gyazo.com/09b47feeaa07a2a71e7b7beb41eab9cb.gif)](https://gyazo.com/09b47feeaa07a2a71e7b7beb41eab9cb)
 ## 計画への補足提案
-https://gyazo.com/70c69003e12d279edbfeb7b90fca03e6
+[![Image from Gyazo](https://i.gyazo.com/fe34c5abc7c43390445c4d03c4813574.gif)](https://gyazo.com/fe34c5abc7c43390445c4d03c4813574)
 ## 「いいね」機能
-https://gyazo.com/261f4a2e8dccc384960352cf45ebdd4f
+[![Image from Gyazo](https://i.gyazo.com/7cff261a478e976e1101eedd859a528f.gif)](https://gyazo.com/7cff261a478e976e1101eedd859a528f)
+## 計画検索機能
+[![Image from Gyazo](https://i.gyazo.com/849619924433c7eb0dfd16cc347ef62d.gif)](https://gyazo.com/849619924433c7eb0dfd16cc347ef62d)
 ## ユーザー詳細画面への遷移/ユーザー情報編集ページへの遷移
-https://gyazo.com/f7cbf21da55dd20fdadaab461d5ad5b8
+[![Image from Gyazo](https://i.gyazo.com/634c923e26bb1170ad152050c1edbe49.gif)](https://gyazo.com/634c923e26bb1170ad152050c1edbe49)
 
 
 # テーブル設計
