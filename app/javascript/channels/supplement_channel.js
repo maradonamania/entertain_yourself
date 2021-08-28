@@ -21,8 +21,12 @@ consumer.subscriptions.create("SupplementChannel", {
                  ------------------------------------           
                  `;
     const supplements = document.getElementById('supplements');
-    const newSupplement = document.getElementById('supplements-area');
+    const newSupplement = document.getElementById('supplement_description');
+    const genreSupplement = document.getElementById('supplement_genre_id');
+    const locationSupplement = document.getElementById('supplement_location_id');
     supplements.insertAdjacentHTML('afterbegin', html);
     newSupplement.value='';
+    genreSupplement.value= '';
+    locationSupplement.value='';
   }
 });
