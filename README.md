@@ -92,4 +92,4 @@ ID:admin Pass:7777
 - belongs_to :supplement
 
 # ER図
-[![Image from Gyazo](https://i.gyazo.com/6dbc3c9654beba219e05c22b5cb02e95.png)](https://gyazo.com/6dbc3c9654beba219e05c22b5cb02e95)
+[![Image from Gyazo](https://i.gyazo.com/66e39e6acf01a689fecabe83f70f9f56.png)](https://gyazo.com/66e39e6acf01a689fecabe83f70f9f56)
