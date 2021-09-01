@@ -1,5 +1,10 @@
 <%= render "shared/header" %>
 <%= render "relationships/follow_button", locals:{ user: @user} %>
+<%if current_user.following?(@user)%>
+<div class="following-detail">
+  <%= link_to "#{@user.nickname}さんの投稿一覧", user_path(@user.id), class: "following-nickname" %>
+</div>
+<%end%>
 <div class="plan-show">
   <div class="plan-box">
     <h2 class="name">

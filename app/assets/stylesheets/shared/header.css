@@ -82,7 +82,6 @@
 
 .user-nickname {
   text-decoration: none;
-  margin-right: 3vw;
   color: white;
   font-weight: bold;
 }
@@ -103,4 +102,8 @@
 .sign-up {
   text-decoration: none;
   color: white;
+}
+.follow-count{
+  color: white;
+  margin-right: 3vw;
 }
