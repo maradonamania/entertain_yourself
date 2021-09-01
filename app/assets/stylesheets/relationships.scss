@@ -1,0 +1,20 @@
+// Place all the styles related to the relationships controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.follow-button{
+  background-image: linear-gradient(90deg, rgba(65, 164, 253, 1), rgba(14, 244, 255, 1));
+}
+.edit_relationship{
+  display: flex;
+  // justify-content: center;
+}
+.btn-block{
+  background-color: transparent;
+  display: block;
+  margin:  auto;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: x-large;
+}

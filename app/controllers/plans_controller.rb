@@ -4,7 +4,7 @@ class PlansController < ApplicationController
   before_action :move_to_index, only: [:edit, :destroy, :update]
 
   def index
-    @user = current_user
+    user = current_user
     @plans = Plan.all.order('created_at DESC')
   end
 
@@ -22,6 +22,7 @@ class PlansController < ApplicationController
   end
 
   def show
+    @user = User.find(@plan.user_id)
     @supplement = Supplement.new
     @supplements = @plan.supplements.includes(:user)
   end
