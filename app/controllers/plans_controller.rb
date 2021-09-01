@@ -57,7 +57,7 @@ class PlansController < ApplicationController
   def move_to_index
     redirect_to root_path unless current_user.id == @plan.user_id
   end
-
+  
   def set_plan
     @plan = Plan.find(params[:id])
   end

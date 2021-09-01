@@ -5,6 +5,15 @@
   <%= link_to "#{@user.nickname}さんの投稿一覧", user_path(@user.id), class: "following-nickname" %>
 </div>
 <%end%>
+<%if notice%>
+<div class= "notice">
+  <%= flash[:notice]%>
+</div>
+<%else%>
+<div class="notice">
+  <%= flash[:alert] %>
+</div>
+<%end%>
 <div class="plan-show">
   <div class="plan-box">
     <h2 class="name">
