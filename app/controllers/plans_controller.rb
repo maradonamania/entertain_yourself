@@ -1,5 +1,5 @@
 class PlansController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:index,:about]
   before_action :set_plan, only: [:show, :edit, :update, :destroy]
   before_action :move_to_index, only: [:edit, :destroy, :update]
 
@@ -47,8 +47,10 @@ class PlansController < ApplicationController
     @plans = Plan.search(params[:keyword])
   end
 
-  private
+  def about
+  end
 
+  private
   def plan_params
     params.require(:plan).permit(:name, :description, :genre_id, :expected_time_id, :location_id,
                                  :budget_id,images: []).merge(user_id: current_user.id)

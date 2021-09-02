@@ -1,0 +1,18 @@
+<%= render "shared/header" %>
+<h1 class="follower-name"><%=@user.nickname%>さんのフォロワー一覧</h1>
+
+
+  <% @followers.each do |user| %>
+  <table class="follow-links">
+    <tr>
+    <th class="follow-link-title">ユーザーのニックネーム</th>
+    </tr>
+    <tr>
+    <td class="follow-link-content">
+    <%=link_to user.nickname,user_path(user.id),class:"follow-link" %>
+    </td>
+    </tr>
+    <hr width="100%" color="lightgray">
+  </table>
+  <% end %>
+    <hr width="100%" color="lightgray">

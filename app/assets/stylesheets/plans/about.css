@@ -1,0 +1,30 @@
+.about{
+  background-image: url('../hoshizora.jpg');
+  width: 100vw;
+  height: 100vh;
+}
+.about-title{
+  color: white;
+  font-size: xx-large;
+  border-bottom: 1px solid white;
+  padding-top: 20vh;
+}
+.about-content{
+  padding-top: 15vh;
+}
+.about-footer{
+  padding-top: 15vh;
+}
+.about-title,.about-footer,
+.about-content{
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+.about-link{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 1vh;
+}

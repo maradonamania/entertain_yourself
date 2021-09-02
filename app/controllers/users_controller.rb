@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :set_params, only: [:show, :edit, :update]
-  before_action :move_to_index, only: [:edit]
+  before_action :set_params, only: [:show, :edit, :update,:followings,:followers]
+  before_action :move_to_index, only: [:edit,:update]
   def show
     @plans = @user.plans
   end
@@ -16,6 +16,16 @@ class UsersController < ApplicationController
       render :edit
     end
   end
+
+  def followings
+    @followings = @user.followings.order('created_at DESC')
+  end
+
+  def followers
+    @followers = @user.followers.order('created_at DESC')
+  end
+
+  private
 
   private
 

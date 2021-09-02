@@ -1,0 +1,20 @@
+<div class="about">
+  <div class="about-header">
+    <h1 class="about-title">ENTERTAIN YOURSELF 概要</h1>
+  </div>
+  <div class="about-content">
+    <p>一人で楽しむ方法を気軽に提案しシェアすることで一人時間を有意義にすることを目的としています。</p><br>
+    <p>また、ユーザー同士が他ユーザーの提案に対して代案や補足をすることでより良い提案を共有することができます。</p>
+  </div>
+  <div class="about-footer">
+  <%if user_signed_in?%>
+    <%=link_to 'トップページへもどる',"/",class:"about-link"%>
+  <%else%>
+    <p>さっそくユーザー登録して提案してみましょう</p><br>
+    <%=link_to '新規登録',new_user_registration_path,class:"about-link"%><br>
+    <p>ログインして始める</p><br>
+    <%= link_to 'ログイン', new_user_session_path,class:"about-link" %>
+  <%end%>
+  </div>
+</div>
+
