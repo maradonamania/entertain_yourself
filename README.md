@@ -33,7 +33,8 @@ ID:admin Pass:7777
 [![Image from Gyazo](https://i.gyazo.com/849619924433c7eb0dfd16cc347ef62d.gif)](https://gyazo.com/849619924433c7eb0dfd16cc347ef62d)
 ## ユーザー詳細画面への遷移/ユーザー情報編集ページへの遷移
 [![Image from Gyazo](https://i.gyazo.com/634c923e26bb1170ad152050c1edbe49.gif)](https://gyazo.com/634c923e26bb1170ad152050c1edbe49)
-
+## フォロー機能/フォロー、フォロワー詳細ページ表示
+[![Image from Gyazo](https://i.gyazo.com/398897c6feb3ccfb7dd915f77ba8fc02.gif)](https://gyazo.com/398897c6feb3ccfb7dd915f77ba8fc02)
 
 # テーブル設計
 
