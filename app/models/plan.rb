@@ -9,13 +9,13 @@ class Plan < ApplicationRecord
   has_many :supplements
   has_many :likes
 
-  def self.search(search)
-    if search != ""
-      Plan.where('description LIKE(?)',"%#{search}%")
-    else
-      Plan.all
-    end
-  end
+  # def self.search(search)
+  #   if search != ""
+  #     Plan.where('description LIKE(?)',"%#{search}%")
+  #   else
+  #     Plan.all
+  #   end
+  # end
 
   with_options presence: true do
     validates :name

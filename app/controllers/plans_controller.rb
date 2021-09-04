@@ -2,6 +2,7 @@ class PlansController < ApplicationController
   before_action :authenticate_user!, except: [:index,:about]
   before_action :set_plan, only: [:show, :edit, :update, :destroy]
   before_action :move_to_index, only: [:edit, :destroy, :update]
+  before_action :set_q, only: [:index,:search,:show]
 
   def index
     user = current_user
@@ -43,8 +44,11 @@ class PlansController < ApplicationController
     redirect_to root_path
   end
 
+  # def search
+  #   @plans = Plan.search(params[:keyword])
+  # end
   def search
-    @plans = Plan.search(params[:keyword])
+    @results = @q.result
   end
 
   def about
@@ -62,5 +66,9 @@ class PlansController < ApplicationController
   
   def set_plan
     @plan = Plan.find(params[:id])
+  end
+
+  def set_q
+    @q = Plan.ransack(params[:q])
   end
 end
