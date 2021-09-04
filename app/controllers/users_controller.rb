@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :set_params, only: [:show, :edit, :update,:followings,:followers]
   before_action :move_to_index, only: [:edit,:update]
   before_action :set_q, only: [:followings,:followers,:show]
+  
   def show
     @plans = @user.plans
   end
