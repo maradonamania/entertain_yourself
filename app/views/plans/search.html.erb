@@ -4,8 +4,8 @@
   <div class='plan-contents'>
   <div class="plan-lists">
     <ul class='plan-lists'>
-      <% if @plans.present? %>
-        <% @plans.each do |plan|%>
+      <% if @results.present? %>
+        <% @results.each do |plan|%>
         <li class='list'>
           <%= link_to plan_path(plan) do %>
           <div class='item-img-content'>
@@ -31,7 +31,7 @@
         </li>
         <% end %>
       
-      <% else %>
+      <% elsif @results.blank? && params[:q] != "" %>
 
       <li class='list'>
         <%= link_to '#' do %>
