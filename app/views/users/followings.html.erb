@@ -1,4 +1,7 @@
 <%= render "shared/header" %>
+<%# パンくずリスト %>
+<% breadcrumb :following_show,current_user %>
+<%# パンくずリスト %>
 <h1 class="following-name"><%=@user.nickname%>さんのフォロー一覧</h1>
 
 

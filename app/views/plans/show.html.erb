@@ -1,4 +1,7 @@
 <%= render "shared/header" %>
+
+<% breadcrumb :plan_show,@plan %>
+
 <%= render "relationships/follow_button", locals:{ user: @user} %>
 <%if current_user.following?(@user)%>
 <div class="following-detail">
