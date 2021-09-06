@@ -1,4 +1,7 @@
 <div class="body">
+
+<% breadcrumb :user_registration %>
+
   <%= form_with model: @user, url: user_registration_path, class: 'registration-main mt-5', local: true do |f| %>
 
   <div class='form-wrap'>

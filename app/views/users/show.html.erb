@@ -1,4 +1,7 @@
 <%= render "shared/header" %>
+
+<% breadcrumb :user_page,@user %>
+
 <div class="contents row">
   <p class="current-user-name"><%= @user.nickname %>さんの投稿一覧</p>
   <%= render "relationships/follow_button", locals:{ user: @user} %>

@@ -1,5 +1,5 @@
 <%#app/assets/stylesheets/s/new.css %>
-
+<% breadcrumb :user_edit, @user %>
 
 <div class='body'>
 <%= form_with model: @user,class: 'registration-main mt-5' ,method: :put,local: true do |f|%>
