@@ -6,10 +6,28 @@
   <table class="follow-links">
     <tr>
     <th class="follow-link-title">ユーザーのニックネーム</th>
+    <td class="follow-link-title">
+      フォロー数
+    </td>
+    <td class="follow-link-title">
+      フォロワー数
+    </td>
+    <td class="follow-link-title">
+      計画投稿数
+    </td>
     </tr>
     <tr>
     <td class="follow-link-content">
     <%=link_to user.nickname,user_path(user.id),class:"follow-link" %>
+    </td>
+    <td class="follow-link-content">
+    <%=user.followings.count%>
+    </td>
+    <td class="follow-link-content">
+    <%=user.followers.count%>
+    </td>
+    <td class="follow-link-content">
+    <%=user.plans.count%>
     </td>
     </tr>
     <hr width="100%" color="lightgray">

@@ -7,7 +7,7 @@
   <div class="search-box">
     <div class="input-box">
     <%= search_form_for @q, url: search_plans_path,class:"search-form" do |f|%>
-      <%=f.search_field :description_or_name_cont ,placeholder:"キーワードから探す",class:"input-box"%>
+      <%=f.search_field :description_or_name_cont ,placeholder:"提案をキーワードから探す",class:"input-box"%>
     </div>
     <div class="search-bars">
       <%=f.collection_select :genre_id_eq,Genre.where.not(id: 0),:id,:name,include_blank:'ジャンル',class:"search-bar"%>
@@ -15,10 +15,15 @@
       <%=f.collection_select :location_id_eq,Location.where.not(id: 0),:id,:name,include_blank:'場所',class:"search-bar"%>
       <%=f.collection_select :expected_time_id_eq,ExpectedTime.where.not(id: 0),:id,:name,include_blank:'目安時間',class:"search-bar"%>
     </div>
-    <button class="search-button">
-      <%# <%= image_submit_tag("search.png", class: 'search-icon')%>
-      <%=f.submit "この条件で検索する",class: 'search-icon' %>
-    </button>
+    <div class="search-submit-box">
+      <div class="search-order">
+        <%= sort_link(@q, :created_at, "投稿順", default_order: :desc) %>
+      </div>
+      <button class="search-button">
+        <%# <%= image_submit_tag("search.png", class: 'search-icon')%>
+        <%=f.submit "この条件で検索する",class: 'search-icon' %>
+      </button>
+    </div>
     <%end%>
   </div>
   </div>

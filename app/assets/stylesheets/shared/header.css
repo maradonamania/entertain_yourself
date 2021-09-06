@@ -19,12 +19,12 @@
 
 .entertain-yourself-icon {
   display: block;
-  max-width: 100%;
+  width: 100%;
   max-height: 100%;
   border-radius: 5px;
 }
 .icon-image{
-  width: 26vw;
+  width: 30vw;
   margin-right: 15vw;
 }
 
@@ -43,17 +43,20 @@
 .search-bars > select{
   width: 24%;
   cursor: pointer;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 .search-box{
   width: 80%;
 }
+
 .search-bar{
   width: 30%;
   display:block;
 }
 .search-form>.input-box {
   width: 100%;
-  height: 5vh;
+  height: 4vh;
   padding-left: 10px;
   display: block;
   cursor: pointer;
@@ -70,8 +73,8 @@
   padding: 8px;
 } */
 .search-button{
-  height: 5vh;
-  width: 80%;
+  height: 4vh;
+  width: 70%;
   text-align: center;
   font-size: 10px;
   font-weight: bold;
@@ -89,6 +92,20 @@
   color: white;
   cursor: pointer;
   font-weight: bold;
+  justify-content: center;
+}
+.sort_link{
+  color:white;
+  font-size: small;
+}
+.search-order{
+  height: 4vh;
+  width: 10%;
+  text-align: center;
+  justify-content: center;
+}
+.search-submit-box{
+  display: flex;
 }
 
 .nav {
