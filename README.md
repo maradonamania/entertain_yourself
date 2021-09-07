@@ -29,12 +29,14 @@ ID:admin Pass:7777
 [![Image from Gyazo](https://i.gyazo.com/fe34c5abc7c43390445c4d03c4813574.gif)](https://gyazo.com/fe34c5abc7c43390445c4d03c4813574)
 ## 「いいね」機能
 [![Image from Gyazo](https://i.gyazo.com/7cff261a478e976e1101eedd859a528f.gif)](https://gyazo.com/7cff261a478e976e1101eedd859a528f)
-## 計画検索機能
-[![Image from Gyazo](https://i.gyazo.com/849619924433c7eb0dfd16cc347ef62d.gif)](https://gyazo.com/849619924433c7eb0dfd16cc347ef62d)
+## 計画検索機能(条件などの詳細設定可能)
+[![Image from Gyazo](https://i.gyazo.com/c1489e62350174590c357c9f209e71c5.gif)](https://gyazo.com/c1489e62350174590c357c9f209e71c5)
 ## ユーザー詳細画面への遷移/ユーザー情報編集ページへの遷移
 [![Image from Gyazo](https://i.gyazo.com/634c923e26bb1170ad152050c1edbe49.gif)](https://gyazo.com/634c923e26bb1170ad152050c1edbe49)
 ## フォロー機能/フォロー、フォロワー詳細ページ表示
 [![Image from Gyazo](https://i.gyazo.com/398897c6feb3ccfb7dd915f77ba8fc02.gif)](https://gyazo.com/398897c6feb3ccfb7dd915f77ba8fc02)
+## パンくずリスト機能
+[![Image from Gyazo](https://i.gyazo.com/4786befc80a94d539e8b41a982ea96b7.gif)](https://gyazo.com/4786befc80a94d539e8b41a982ea96b7)
 
 # テーブル設計
 
@@ -91,6 +93,15 @@ ID:admin Pass:7777
 - belongs_to :user
 - belongs_to :plan
 - belongs_to :supplement
+
+## relationshipsテーブル
+| column        | type       | options                       |
+| user_id       | references | null:false, foreign_key: true |
+| follow_id     | references | null:false, foreign_key: true |
+
+## association
+- belongs_to :user
+- belongs_to :follow
 
 # ER図
 [![Image from Gyazo](https://i.gyazo.com/66e39e6acf01a689fecabe83f70f9f56.png)](https://gyazo.com/66e39e6acf01a689fecabe83f70f9f56)
