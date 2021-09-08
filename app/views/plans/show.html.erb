@@ -19,74 +19,71 @@
 <%end%>
 <div class="plan-show">
   <div class="plan-box">
-    <h2 class="name">
-      <%= @plan.name %>
-    </h2>
-    <div class="plan-img-content">
-    <% if @plan.images.attached?%>
-    <% @plan.images.each do |image| %>
-      <%= image_tag image,class:"plan-box-img" %>
-    <% end %>
-    <% else %>
-      <%= image_tag "camera-logo.png",class: "plan-img" %>
-    <% end %>
+    <div class="plan-box-left">
+      <div class="plan-img-content">
+        <% if @plan.images.attached?%>
+        <% @plan.images.each do |image| %>
+          <%= image_tag image,class:"plan-box-img" %>
+        <% end %>
+        <% else %>
+          <%= image_tag "camera-logo.png",class: "plan-img" %>
+        <% end %>
+      </div>
+
     </div>
-    <div class="plan-price-box">
-      <span class="plan-price">
-        <%= "#{@plan.budget.name}" %>
-      </span>
-      <span class="plan-postage">
-        <%= @plan.expected_time.name %>
-      </span>
+    <div class="plan-box-right">
+    <div class="plan-edit-box">
+        <% if user_signed_in? %>
+        <% if current_user.id == @plan.user_id %>
+
+        <%= link_to "提案を編集", edit_plan_path(@plan.id), method: :get, class: "plan-green-btn" %>
+        
+        <%= link_to "提案を削除", plan_path(@plan.id), method: :delete, class:"plan-destroy" %>
+        <% end %>
+        <% end %>
     </div>
-
-
-    <% if user_signed_in? %>
-    <% if current_user.id == @plan.user_id %>
-
-    <%= link_to "提案を編集", edit_plan_path(@plan.id), method: :get, class: "plan-green-btn" %>
-    
-    <%= link_to "提案を削除", plan_path(@plan.id), method: :delete, class:"plan-destroy" %>
-
-    <% end %>
-
-    <% end %>
-
-    <div class="plan-explain-box">
-      <span>計画詳細：<%= @plan.description %></span>
+      <table class="detail-table">
+        <tbody>
+          <tr>
+            <th class="detail-plan">提案者</th>
+            <td class="detail-value"><%= @plan.user.nickname %></td>
+          </tr>
+          <tr>
+            <th class="detail-plan">計画名</th>
+            <td class="detail-value"><%= @plan.name %></td>
+          </tr>
+          <tr>
+            <th class="detail-plan">ジャンル</th>
+            <td class="detail-value"><%= @plan.genre.name %></td>
+          </tr>
+          <tr>
+            <th class="detail-plan">予算</th>
+            <td class="detail-value"><%= @plan.budget.name %></td>
+          </tr>
+          <tr>
+            <th class="detail-plan">場所</th>
+            <td class="detail-value"><%= @plan.location.name %></td>
+          </tr>
+          <tr>
+            <th class="detail-plan">目安時間</th>
+            <td class="detail-value"><%= @plan.expected_time.name %></td>
+          </tr>
+          <tr>
+            <th class="detail-plan">計画詳細</th>
+            <td class="detail-value"><%= @plan.description %></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    
-    <table class="detail-table">
-      <tbody>
-        <tr>
-          <th class="detail-plan">提案者</th>
-          <td class="detail-value"><%= @plan.user.nickname %></td>
-        </tr>
-        <tr>
-          <th class="detail-plan">ジャンル</th>
-          <td class="detail-value"><%= @plan.genre.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-plan">予算</th>
-          <td class="detail-value"><%= @plan.budget.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-plan">場所</th>
-          <td class="detail-value"><%= @plan.location.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-plan">目安時間</th>
-          <td class="detail-value"><%= @plan.expected_time.name %></td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="option">
+  </div>
+  <div class="option-box">
+  <div class="option">
       <div class="favorite-btn">
         <%= render partial: 'shared/like', locals: {plan: @plan} %>
       </div>
-    </div>
   </div>
-  <h1>代案や補足を提案しよう</h1>
+  </div>
+  <h1 class="supplement-box-title">代案や補足を提案しよう</h1>
    <div class="supplement-box">
     <%=form_with model: [@plan,@supplement] ,url:plan_supplements_path(@plan.id), class:"supplement-form" do |f| %>
     <div class="weight-bold-text">

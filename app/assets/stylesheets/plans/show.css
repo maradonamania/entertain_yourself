@@ -11,10 +11,16 @@
   background-color: #FFF;
   width: 70vw;
   min-width: 1200px;
-  padding: 10vh 15vw;
+  padding: 10vh 10vw;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+.plan-box-right{
+  width: 40%;
+}
+.plan-box-left{
+  width: 50%;
 }
 
 .plan-box>.name {
@@ -23,45 +29,65 @@
   font-size: 25px;
 }
 
-.plan-box-img {
+/* .plan-box-img {
   height: 50vh;
   width: 60vw;
   min-height: 500px;
   background-color: rgb(205, 202, 202);
   object-fit: contain;
-  border-radius: 5px;
+  border-radius: 5px; */
+/* } */
+.plan-img-content{
+  height: 50%;
 }
-
-
+.plan-box-img{
+  height: 40%;
+  width: 80%;
+  min-height: 300px;
+  background-color: rgb(205, 202, 202);
+  object-fit: contain;
+  border-radius: 5px; 
+  align-items: center;
+  display:block;
+}
+.plan-edit-box{
+  text-align: center;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
 .plan-green-btn {
   text-align: center;
   background-image: linear-gradient(90deg, rgba(144, 245, 154, 1), rgba(4, 202, 255, 1));
   font-size: 24px;
   font-weight: bold;
   color: #FFF;
-  margin: 20px 0px;
-  padding: 2vh 10vw;
+  margin: 5px 0px;
+  /* padding: 5px 10vw; */
   text-decoration: none;
   border-radius: 5px;
+  /* width: 80%; */
 }
 
 .plan-destroy {
   background-color: lightgray;
   text-align: center;
   font-size: 24px;
+  font-weight: bold;
   color: black;
-  margin: 20px 0px;
-  padding: 2vh 10vw;
+  margin: 5px 0px;
+  /* padding: 5px 10vw; */
   text-decoration: none;
   border-radius: 5px;
+  /* width: 80%; */
 }
 
 .plan-explain-box {
   font-weight: bold;
   font-size: 18px;
-  padding: 2px;
-  margin: 40px 0px;
-  overflow-wrap: anywhere;
+  /* padding: 2px; */
+  /* margin: 40px 0px; */
+  /* overflow-wrap: anywhere; */
   border: 1px solid lightgray;
 }
 
@@ -84,23 +110,31 @@
   border: 1px solid #dedede;
   font-size: 14px;
 }
-
+.option-box{
+  width: 100vw;
+  background-image: radial-gradient(circle, rgba(255, 242, 58, 1), rgba(224, 162, 8, 1) 80%);
+  display: flex;
+  justify-content: center;
+}
 .option {
   display: flex;
   justify-content: space-between;
   position: relative;
+  margin: 1px auto;
 }
 
 .favorite-btn {
+  display: block;
   border-radius: 5px;
   width: 15vw;
   min-width: 200px;
-  color: red;
-  border: 2px solid red;
+  color: goldenrod;
+  border: 2px solid goldenrod;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 20px;
+  background-color: ivory;
 }
 
 .favorite-star-icon {
@@ -119,12 +153,15 @@
   align-items: center;
 }
 
-.report-flag-icon {
-  margin-right: 5px;
+.supplement-box-title{
+  width: 100vw;
+  height: 5vh;
+  background-image: linear-gradient(179deg, rgba(65, 164, 253, 0.7), rgba(14, 244, 255, 1));
+  text-align: center;
+  font-weight: bold;
+  font-size:x-large;
+  color: white;
 }
-
-
-/* /商品の概要 */
 
 .supplement-box {
   width: 40vw;
