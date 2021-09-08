@@ -76,10 +76,6 @@
   font-weight: bold;
   justify-content: center;
 }
-.sign-up {
-  text-decoration: none;
-  color: white;
-}
 .follow-count{
   color: white;
 }
@@ -208,7 +204,15 @@
   color: white;
 }
 
+.sign-up {
+  text-decoration: none;
+  color: white;
+}
 .follow-count{
   margin-right: 3vw;
 }
+/* .follow-count-link{
+  color: yellowgreen;
+  font-weight: bold;
+} */
 } 

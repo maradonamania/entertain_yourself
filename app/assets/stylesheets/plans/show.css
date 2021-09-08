@@ -1,60 +1,64 @@
+/* common */
 .plan-show {
   background-color: #f8f8f8;
   width: 100vw;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   padding: 5vh 0;
+  text-align: center;
 }
 
 .plan-box {
   background-color: #FFF;
-  width: 70vw;
-  min-width: 1200px;
-  padding: 10vh 10vw;
+  width: 50%;
+  min-width: 1000px;
+  /* padding: 10vh 10vw; */
+  text-align: center;
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.plan-box-right{
-  width: 40%;
+  flex-direction: column;
 }
 .plan-box-left{
-  width: 50%;
+  text-align: center;
+  width: 100vw;
 }
-
-.plan-box>.name {
+/* .plan-box>.name {
   text-align: center;
   font-weight: bold;
   font-size: 25px;
-}
-
-/* .plan-box-img {
-  height: 50vh;
-  width: 60vw;
-  min-height: 500px;
-  background-color: rgb(205, 202, 202);
-  object-fit: contain;
-  border-radius: 5px; */
-/* } */
+} */
 .plan-img-content{
-  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 929px;
 }
 .plan-box-img{
-  height: 40%;
-  width: 80%;
+  height: 20%;
+  width: 65%;
   min-height: 300px;
   background-color: rgb(205, 202, 202);
   object-fit: contain;
-  border-radius: 5px; 
-  align-items: center;
-  display:block;
+  border-radius: 5px;
+  display:block; 
+  margin-left: auto;
+  margin-right: auto;
+}
+.plan-box-right{
+  margin:1px auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
 }
 .plan-edit-box{
+  width: 50vw;
   text-align: center;
   margin-bottom: 15px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .plan-green-btn {
   text-align: center;
@@ -62,11 +66,10 @@
   font-size: 24px;
   font-weight: bold;
   color: #FFF;
-  margin: 5px 0px;
-  /* padding: 5px 10vw; */
+  margin-top: 1vh;
+  margin-bottom: 1vh;
   text-decoration: none;
   border-radius: 5px;
-  /* width: 80%; */
 }
 
 .plan-destroy {
@@ -82,18 +85,14 @@
   /* width: 80%; */
 }
 
-.plan-explain-box {
-  font-weight: bold;
-  font-size: 18px;
-  /* padding: 2px; */
-  /* margin: 40px 0px; */
-  /* overflow-wrap: anywhere; */
-  border: 1px solid lightgray;
-}
-
 .detail-table {
   margin-bottom: 30px;
-  width: 100%;
+  width: 60%;
+  max-width: 600px;
+  text-align: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right:auto;
 }
 
 .detail-plan {
@@ -155,7 +154,7 @@
 
 .supplement-box-title{
   width: 100vw;
-  height: 5vh;
+  height: 8vh;
   background-image: linear-gradient(179deg, rgba(65, 164, 253, 0.7), rgba(14, 244, 255, 1));
   text-align: center;
   font-weight: bold;
@@ -168,6 +167,7 @@
   background-color: #fff;
   margin: 5vh 0;
   text-align: center;
+  margin: 0 auto;
 }
 
 .supplement-text {
@@ -233,12 +233,12 @@
   width:  100%;
   border: 2px solid lightgray;
 }
-#map {
+/* #map {
   height: 40vh;
   width: 50vw;
   padding: auto;
   margin-bottom: 10px;
-}
+} */
 .search-form,sub{
  justify-content: center;
 }
@@ -253,4 +253,90 @@
 }
 .notice{
   text-align: center;
+}
+@media (min-width: 930px){
+.plan-show {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.supplement-box {
+  width: 40vw;
+  margin: 5vh 0;
+  text-align: center;
+}
+.plan-box-right{
+  width: 40%;
+}
+.plan-box-left{
+  width: 50%;
+}
+.plan-img-content{
+  height: 50%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.plan-box-img{
+  height: 40%;
+  width: 80%;
+  min-height: 300px;
+  object-fit: contain;
+  border-radius: 5px;
+  display:block; 
+  margin-left: auto;
+  margin-right: auto;
+}
+.plan-edit-box{
+  width: 400px;
+  text-align: center;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.plan-green-btn {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.plan-destroy {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.plan-explain-box {
+  font-weight: bold;
+  font-size: 18px;
+  display:block;
+}
+
+.detail-table {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.detail-plan {
+  width: 20%;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 20px;
+  font-size: 14px;
+}
 }

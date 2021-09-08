@@ -31,51 +31,51 @@
       </div>
 
     </div>
-    <div class="plan-box-right">
+  <div class="plan-box-right">
     <div class="plan-edit-box">
-        <% if user_signed_in? %>
-        <% if current_user.id == @plan.user_id %>
+      <% if user_signed_in? %>
+      <% if current_user.id == @plan.user_id %>
 
-        <%= link_to "提案を編集", edit_plan_path(@plan.id), method: :get, class: "plan-green-btn" %>
-        
-        <%= link_to "提案を削除", plan_path(@plan.id), method: :delete, class:"plan-destroy" %>
-        <% end %>
-        <% end %>
+      <%= link_to "提案を編集", edit_plan_path(@plan.id), method: :get, class: "plan-green-btn" %>
+      
+      <%= link_to "提案を削除", plan_path(@plan.id), method: :delete, class:"plan-destroy" %>
+      <% end %>
+      <% end %>
     </div>
-      <table class="detail-table">
-        <tbody>
-          <tr>
-            <th class="detail-plan">提案者</th>
-            <td class="detail-value"><%= @plan.user.nickname %></td>
-          </tr>
-          <tr>
-            <th class="detail-plan">計画名</th>
-            <td class="detail-value"><%= @plan.name %></td>
-          </tr>
-          <tr>
-            <th class="detail-plan">ジャンル</th>
-            <td class="detail-value"><%= @plan.genre.name %></td>
-          </tr>
-          <tr>
-            <th class="detail-plan">予算</th>
-            <td class="detail-value"><%= @plan.budget.name %></td>
-          </tr>
-          <tr>
-            <th class="detail-plan">場所</th>
-            <td class="detail-value"><%= @plan.location.name %></td>
-          </tr>
-          <tr>
-            <th class="detail-plan">目安時間</th>
-            <td class="detail-value"><%= @plan.expected_time.name %></td>
-          </tr>
-          <tr>
-            <th class="detail-plan">計画詳細</th>
-            <td class="detail-value"><%= @plan.description %></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <table class="detail-table">
+    <tbody>
+      <tr>
+        <th class="detail-plan">提案者</th>
+        <td class="detail-value"><%= @plan.user.nickname %></td>
+      </tr>
+      <tr>
+        <th class="detail-plan">計画名</th>
+        <td class="detail-value"><%= @plan.name %></td>
+      </tr>
+      <tr>
+        <th class="detail-plan">ジャンル</th>
+        <td class="detail-value"><%= @plan.genre.name %></td>
+      </tr>
+      <tr>
+        <th class="detail-plan">予算</th>
+        <td class="detail-value"><%= @plan.budget.name %></td>
+      </tr>
+      <tr>
+        <th class="detail-plan">場所</th>
+        <td class="detail-value"><%= @plan.location.name %></td>
+      </tr>
+      <tr>
+        <th class="detail-plan">目安時間</th>
+        <td class="detail-value"><%= @plan.expected_time.name %></td>
+      </tr>
+      <tr>
+        <th class="detail-plan">計画詳細</th>
+        <td class="detail-value"><%= @plan.description %></td>
+      </tr>
+    </tbody>
+    </table>
   </div>
+</div>
   <div class="option-box">
   <div class="option">
       <div class="favorite-btn">
