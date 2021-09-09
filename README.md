@@ -30,7 +30,7 @@ ID:admin Pass:7777
 ## 「いいね」機能
 [![Image from Gyazo](https://i.gyazo.com/7cff261a478e976e1101eedd859a528f.gif)](https://gyazo.com/7cff261a478e976e1101eedd859a528f)
 ## 計画検索機能(条件などの詳細設定可能)
-[![Image from Gyazo](https://i.gyazo.com/c1489e62350174590c357c9f209e71c5.gif)](https://gyazo.com/c1489e62350174590c357c9f209e71c5)
+[![Image from Gyazo](https://i.gyazo.com/6d0b9f651771a2898bf3cdf2b2868de6.gif)](https://gyazo.com/6d0b9f651771a2898bf3cdf2b2868de6)
 ## ユーザー詳細画面への遷移/ユーザー情報編集ページへの遷移
 [![Image from Gyazo](https://i.gyazo.com/634c923e26bb1170ad152050c1edbe49.gif)](https://gyazo.com/634c923e26bb1170ad152050c1edbe49)
 ## フォロー機能/フォロー、フォロワー詳細ページ表示
