@@ -133,7 +133,7 @@
   margin: 1px auto;
 }
 
-.favorite-btn {
+.favorite-star-icon {
   display: block;
   border-radius: 5px;
   width: 15vw;
@@ -146,10 +146,10 @@
   margin-right: 20px;
   background-color: ivory;
 }
-
-.favorite-star-icon {
-  color: goldenrod;
+.favorite-star-icon > span{
+  margin-left: 5px;
 }
+
 .bookmark-icon{
   display: block;
   border-radius: 5px;
@@ -162,6 +162,10 @@
   align-items: center;
   margin-right: 20px;
   background-color: ivory;
+}
+.bookmark-icon > span{
+  margin-left: 5px;
+}
 }
 
 .report-btn {
