@@ -148,7 +148,20 @@
 }
 
 .favorite-star-icon {
-  margin-right: 5px;
+  color: goldenrod;
+}
+.bookmark-icon{
+  display: block;
+  border-radius: 5px;
+  width: 15vw;
+  min-width: 200px;
+  color: goldenrod;
+  border: 2px solid goldenrod;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  background-color: ivory;
 }
 
 .report-btn {
@@ -350,4 +363,5 @@
   padding: 20px;
   font-size: 14px;
 }
+
 }

@@ -81,6 +81,9 @@
       <div class="favorite-btn">
         <%= render partial: 'shared/like', locals: {plan: @plan} %>
       </div>
+      <div class='star-btn'>
+        <%= render partial: 'shared/favorites', locals:{plan: @plan,user: @user} %>
+      </div>
   </div>
   </div>
   <h1 class="supplement-box-title">代案や補足を提案しよう</h1>

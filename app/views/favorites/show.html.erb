@@ -1,0 +1,8 @@
+<% if @favorites.present? %>
+    
+  <% @favorites.each do |favorite| %>
+    <%=favorite.name%>
+    <%=favorite.description%>
+  <% end %>
+    
+<% end %>
