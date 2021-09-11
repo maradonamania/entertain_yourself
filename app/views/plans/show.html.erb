@@ -76,13 +76,18 @@
     </table>
   </div>
 </div>
+<%if @user.id != current_user.id%>
   <div class="option-box">
   <div class="option">
       <div class="favorite-btn">
         <%= render partial: 'shared/like', locals: {plan: @plan} %>
       </div>
+      <div class='star-btn'>
+        <%= render partial: 'shared/favorites', locals:{plan: @plan,user: @user} %>
+      </div>
   </div>
   </div>
+<%end%>
   <h1 class="supplement-box-title">代案や補足を提案しよう</h1>
    <div class="supplement-box">
     <%=form_with model: [@plan,@supplement] ,url:plan_supplements_path(@plan.id), class:"supplement-form" do |f| %>

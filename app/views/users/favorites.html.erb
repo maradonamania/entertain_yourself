@@ -1,0 +1,57 @@
+<%= render "shared/header" %>
+<p class="favorite-list-title">
+  <%="#{current_user.nickname}さんのお気に入り一覧"%>
+</p>
+<div class="following-detail">
+  <%= link_to "#{@user.nickname}さんの投稿一覧", user_path(@user.id), class: "following-nickname" %>
+</div>
+<ul class='plan-lists'>
+    <% if @favorite_list.present? %>
+      <% @favorite_list.each do |plan|%>
+      <li class='list'>
+        <%= link_to plan_path(plan) do %>
+        <div class='item-img-content'>
+        <%if plan.images.attached?%>
+          <%= image_tag plan.images[0],class: "plan-img" %>
+        <% else %>
+          <%= link_to image_tag("camera-logo.png",class:"plan-img"),"plans/#{plan.id}" %>
+        <% end %>      
+        </div>
+        <div class='plan-info'>
+          <div class='plan-name'>
+            <%= plan.name %>
+          </div>
+          <div class='plan-price'>
+            <span>予算<%= plan.budget.name %><br><%= plan.expected_time.name %></span>
+            <div class='star-btn'>
+              <%= image_tag "star5.png", class:"star-icon" %>
+              <span class='star-count'><%= plan.likes.count %></span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+    
+    <% else %>
+    
+    <li class='list'>
+      <%= link_to '#' do %>
+      <%= image_tag "shining-star.jpg", class: "item-img" %>
+      <div class='plan-info'>
+        <h3 class='plan-name'>
+          まだお気に入り登録されていません。計画を探して登録してみましょう！
+        </h3>
+        <div class='plan-price'>
+          <span>予算1000円以下<br>(例)ジョギング</span>
+          <div class='star-btn'>
+            <%= image_tag "star5.png", class:"star-icon" %>
+            <span class='star-count'>0</span>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </li>
+  
+    <% end %>
+  </ul>

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show,:edit,:update] do
     member do 
       get :followings, :followers
+      get 'favorites'
     end
   end
   resources :plans do
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
       get 'search'
       get 'about'
     end
+    resources :favorites, only:[:create,:destroy]
     resources :supplements, only: :create
     resources :likes, only: [:create,:destroy]
   end
