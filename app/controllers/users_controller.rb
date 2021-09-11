@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_action :set_params, only: [:show, :edit, :update,:followings,:followers]
+  before_action :set_params, only: [:show, :edit, :update,:followings,:followers,:favorites]
   before_action :move_to_index, only: [:edit,:update]
-  before_action :set_q, only: [:followings,:followers,:show]
+  before_action :set_q, only: [:followings,:followers,:show,:favorites]
   
   def show
     @plans = @user.plans
@@ -19,6 +19,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def favorites
+    @plans = current_user.plans
+    favorites = Favorite.where(user_id: current_user.id).pluck(:plan_id)
+    @favorite_list = Plan.find(favorites)
+  end
+
   def followings
     @followings = @user.followings.order('created_at DESC')
   end
@@ -26,8 +32,6 @@ class UsersController < ApplicationController
   def followers
     @followers = @user.followers.order('created_at DESC')
   end
-
-  private
 
   private
 

@@ -14,10 +14,6 @@ class FavoritesController < ApplicationController
     @favorite.destroy
     redirect_to plan_path(params[:plan_id])
   end
-
-  def show
-   
-  end
   
   private
   def set_plan
