@@ -10,20 +10,17 @@ class User < ApplicationRecord
   has_many :followers, through: :reverse_of_relationships, source: :user
 
   def follow(other_user)
-    unless self == other_user
-      self.relationships.find_or_create_by(follow_id: other_user.id)
-    end
+    relationships.find_or_create_by(follow_id: other_user.id) unless self == other_user
   end
 
   def unfollow(other_user)
-    relationship = self.relationships.find_by(follow_id: other_user.id)
+    relationship = relationships.find_by(follow_id: other_user.id)
     relationship.destroy if relationship
   end
 
   def following?(other_user)
-    self.followings.include?(other_user)
+    followings.include?(other_user)
   end
-
 
   def already_liked?(plan)
     likes.exists?(plan_id: plan.id)

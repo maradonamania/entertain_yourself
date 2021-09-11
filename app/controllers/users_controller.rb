@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
-  before_action :set_params, only: [:show, :edit, :update,:followings,:followers,:favorites]
-  before_action :move_to_index, only: [:edit,:update]
-  before_action :set_q, only: [:followings,:followers,:show,:favorites]
-  
+  before_action :set_params, only: [:show, :edit, :update, :followings, :followers, :favorites]
+  before_action :move_to_index, only: [:edit, :update]
+  before_action :set_q, only: [:followings, :followers, :show, :favorites]
+
   def show
     @plans = @user.plans
   end
@@ -50,5 +50,4 @@ class UsersController < ApplicationController
   def set_q
     @q = Plan.ransack(params[:q])
   end
-  
 end

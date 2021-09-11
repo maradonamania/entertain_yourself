@@ -1,8 +1,8 @@
 class PlansController < ApplicationController
-  before_action :authenticate_user!, except: [:index,:about]
+  before_action :authenticate_user!, except: [:index, :about]
   before_action :set_plan, only: [:show, :edit, :update, :destroy]
   before_action :move_to_index, only: [:edit, :destroy, :update]
-  before_action :set_q, only: [:index,:search,:show]
+  before_action :set_q, only: [:index, :search, :show]
 
   def index
     user = current_user
@@ -55,15 +55,16 @@ class PlansController < ApplicationController
   end
 
   private
+
   def plan_params
     params.require(:plan).permit(:name, :description, :genre_id, :expected_time_id, :location_id,
-                                 :budget_id,images: []).merge(user_id: current_user.id)
+                                 :budget_id, images: []).merge(user_id: current_user.id)
   end
 
   def move_to_index
     redirect_to root_path unless current_user.id == @plan.user_id
   end
-  
+
   def set_plan
     @plan = Plan.find(params[:id])
   end
