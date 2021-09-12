@@ -18,7 +18,9 @@ ID:admin Pass:7777
 ユーザー登録をして、一人での過ごし方の提案をします。ログイン後、トップページの提案するボタンを押すことで提案作成画面へと遷移し、計画を提案することができます。トップページでは計画の一覧が表示されており、ユーザー登録をしていれば、各計画の表示部をクリックすることでその詳細へと遷移できます。詳細ページではその計画に補足として代案などをコメントすることができる他「いいね」をして評価をすることもできます。
 # 製作背景
 コロナ禍にあり、多人数で休日を過ごすことがなかなか難しくなってきた背景や、サービス業など平日休みで友人と予定が合わなく一人で過ごすことが多くなっているような人が、自分で自分の機嫌を取るように、一人でも楽しめる方法をシェアすることが時間の有効活用に繋がり、また人との繋がりにもなると考えたため。
+
 # DEMO
+
 ## TOP画面での閲覧（詳細はユーザー登録が必要です）
 [![Image from Gyazo](https://i.gyazo.com/f7833fe766d4522a9a6d61ba3804f933.gif)](https://gyazo.com/f7833fe766d4522a9a6d61ba3804f933)
 ## 詳細画面への遷移
@@ -37,7 +39,7 @@ ID:admin Pass:7777
 [![Image from Gyazo](https://i.gyazo.com/398897c6feb3ccfb7dd915f77ba8fc02.gif)](https://gyazo.com/398897c6feb3ccfb7dd915f77ba8fc02)
 ## パンくずリスト機能
 [![Image from Gyazo](https://i.gyazo.com/4786befc80a94d539e8b41a982ea96b7.gif)](https://gyazo.com/4786befc80a94d539e8b41a982ea96b7)
-## お気に入り登録機能
+## 計画お気に入り登録機能/お気に入り計画一覧画面
 [![Image from Gyazo](https://i.gyazo.com/81391a3de094a7c3d3453853fa627fc8.gif)](https://gyazo.com/81391a3de094a7c3d3453853fa627fc8)
 
 # テーブル設計
@@ -108,7 +110,7 @@ ID:admin Pass:7777
 ## favoritesテーブル
 | column        | type       | options                       |
 | user_id       | references | null:false, foreign_key: true |
-| plan_id     | references | null:false, foreign_key: true |
+| plan_id       | references | null:false, foreign_key: true |
 
 ## association
 - belongs_to :user
