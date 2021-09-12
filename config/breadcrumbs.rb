@@ -32,6 +32,11 @@ crumb :follower_show do |current_user|
   parent :root
 end
 
+crumb :favorite_list do
+  link "「#{current_user.nickname}」さんのお気に入り一覧",favorites_user_path(current_user.id)
+  parent :root
+end
+
 crumb :user_registration do
   link "新規登録",new_user_registration_path
   parent :root

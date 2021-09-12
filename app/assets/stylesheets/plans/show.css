@@ -181,11 +181,11 @@
 
 .supplement-box-title{
   width: 100vw;
-  height: 6.5vh;
+  height: 36px;
   background-image: linear-gradient(179deg, rgba(65, 164, 253, 0.7), rgba(14, 244, 255, 1));
   text-align: center;
   font-weight: bold;
-  font-size:x-large;
+  font-size: x-large;
   color: white;
 }
 
@@ -281,6 +281,7 @@
 .notice{
   text-align: center;
 }
+
 @media (min-width: 930px){
 .plan-show {
   display: flex;

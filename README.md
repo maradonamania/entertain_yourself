@@ -37,6 +37,8 @@ ID:admin Pass:7777
 [![Image from Gyazo](https://i.gyazo.com/398897c6feb3ccfb7dd915f77ba8fc02.gif)](https://gyazo.com/398897c6feb3ccfb7dd915f77ba8fc02)
 ## パンくずリスト機能
 [![Image from Gyazo](https://i.gyazo.com/4786befc80a94d539e8b41a982ea96b7.gif)](https://gyazo.com/4786befc80a94d539e8b41a982ea96b7)
+## お気に入り登録機能
+[![Image from Gyazo](https://i.gyazo.com/81391a3de094a7c3d3453853fa627fc8.gif)](https://gyazo.com/81391a3de094a7c3d3453853fa627fc8)
 
 # テーブル設計
 
@@ -102,6 +104,15 @@ ID:admin Pass:7777
 ## association
 - belongs_to :user
 - belongs_to :follow
+
+## favoritesテーブル
+| column        | type       | options                       |
+| user_id       | references | null:false, foreign_key: true |
+| plan_id     | references | null:false, foreign_key: true |
+
+## association
+- belongs_to :user
+- belongs_to :plan
 
 # ER図
 [![Image from Gyazo](https://i.gyazo.com/66e39e6acf01a689fecabe83f70f9f56.png)](https://gyazo.com/66e39e6acf01a689fecabe83f70f9f56)

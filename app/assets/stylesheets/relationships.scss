@@ -16,5 +16,11 @@
   border: none;
   cursor: pointer;
   font-weight: bold;
+  object-fit: contain;
+  height: 36px;
+}
+@media (min-width: 700px){
+.btn-block{
   font-size: x-large;
+}
 }
