@@ -35,6 +35,8 @@ ID:admin Pass:7777
 [![Image from Gyazo](https://i.gyazo.com/6d0b9f651771a2898bf3cdf2b2868de6.gif)](https://gyazo.com/6d0b9f651771a2898bf3cdf2b2868de6)
 ## ユーザー詳細画面への遷移/ユーザー情報編集ページへの遷移
 [![Image from Gyazo](https://i.gyazo.com/634c923e26bb1170ad152050c1edbe49.gif)](https://gyazo.com/634c923e26bb1170ad152050c1edbe49)
+## ユーザー投稿一覧う
+[![Image from Gyazo](https://i.gyazo.com/eebe59855c88cd20340edc2e7e2c63d1.gif)](https://gyazo.com/eebe59855c88cd20340edc2e7e2c63d1)
 ## フォロー機能/フォロー、フォロワー詳細ページ表示
 [![Image from Gyazo](https://i.gyazo.com/398897c6feb3ccfb7dd915f77ba8fc02.gif)](https://gyazo.com/398897c6feb3ccfb7dd915f77ba8fc02)
 ## パンくずリスト機能
