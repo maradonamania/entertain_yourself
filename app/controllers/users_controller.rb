@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :set_q, only: [:followings, :followers, :show, :favorites]
 
   def show
-    @plans = @user.plans
+    @plans = @user.plans.order('created_at DESC')
   end
 
   def edit
