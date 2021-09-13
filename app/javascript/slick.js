@@ -6,7 +6,7 @@ $(function() {
       slidesToShow: 3,   
 
       responsive: [{
-        breakpoint: 850, //画面幅768pxで以下のセッティング
+        breakpoint: 850, 
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,

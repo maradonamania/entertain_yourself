@@ -11,10 +11,14 @@
   flex-direction: column;
 }
 .name{
-  color: black;
+  color: white;
   font-size: large;
   font-weight: bold;
   text-align: center;
+  
+}
+.name > a {
+  color: white;
 }
 .contents-detail{
   border: 1px solid white;

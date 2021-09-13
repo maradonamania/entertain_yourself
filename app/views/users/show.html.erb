@@ -10,7 +10,7 @@
   <% end %>
   <% @plans.each do |plan| %>
     <div class="content_post">
-      <span class="name">提案名：<%= plan.name %></span>
+      <span class="name">提案名：<%=link_to plan.name,plan_path(plan.id) %></span>
       <ul class="current-user-image-box">
       <% plan.images.each do |image| %>
       <li>
