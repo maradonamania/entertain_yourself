@@ -1,10 +1,10 @@
 <% if current_user.already_liked?(plan) %>
-  <%= link_to plan_like_path(plan.id,current_user.id),class:"favorite-star-icon",method: :delete do%>
-  <%=image_tag"good.png" ,width:"20",height:"20" %>
-  <span>Good!<%= plan.likes.count %></span>
+  <%= link_to plan_like_path(plan.id,current_user.id),class:"favorite-star-icon",method: :delete, remote: true do%>
+  <%=image_tag"not_good.png" ,width:"20",height:"20" %>
+  <span class="good2">Good!<%= plan.likes.count %></span>
   <%end%>
 <% else %>
-  <%= link_to plan_likes_path(plan.id),class:"favorite-star-icon",method: :post do %>
+  <%= link_to plan_likes_path(plan.id),class:"favorite-star-icon",method: :post, remote: true do %>
   <%=image_tag "good.png" ,width:"20",height:"20" %>
   <span>Good!<%= plan.likes.count %></span>
   <%end%>

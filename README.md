@@ -27,10 +27,10 @@ ID:admin Pass:7777
 [![Image from Gyazo](https://i.gyazo.com/373880328e7ced2dc3f843392a488d20.gif)](https://gyazo.com/373880328e7ced2dc3f843392a488d20)
 ## 計画投稿画面への遷移
 [![Image from Gyazo](https://i.gyazo.com/09b47feeaa07a2a71e7b7beb41eab9cb.gif)](https://gyazo.com/09b47feeaa07a2a71e7b7beb41eab9cb)
-## 計画への補足提案
+## 計画への補足提案(非同期通信)
 [![Image from Gyazo](https://i.gyazo.com/fe34c5abc7c43390445c4d03c4813574.gif)](https://gyazo.com/fe34c5abc7c43390445c4d03c4813574)
-## 「いいね」機能
-[![Image from Gyazo](https://i.gyazo.com/7cff261a478e976e1101eedd859a528f.gif)](https://gyazo.com/7cff261a478e976e1101eedd859a528f)
+## 「いいね」機能(非同期通信)
+[![Image from Gyazo](https://i.gyazo.com/eef180c28fb5c809d4fb814d618497b9.gif)](https://gyazo.com/eef180c28fb5c809d4fb814d618497b9)
 ## 計画検索機能(条件などの詳細設定可能)
 [![Image from Gyazo](https://i.gyazo.com/6d0b9f651771a2898bf3cdf2b2868de6.gif)](https://gyazo.com/6d0b9f651771a2898bf3cdf2b2868de6)
 ## ユーザー詳細画面への遷移/ユーザー情報編集ページへの遷移

@@ -149,6 +149,9 @@
 .favorite-star-icon > span{
   margin-left: 5px;
 }
+.good2{
+  color:gray;
+}
 
 .bookmark-icon{
   display: block;
