@@ -22,7 +22,7 @@ ID:admin Pass:7777
 # DEMO
 
 ## TOP画面での閲覧（詳細はユーザー登録が必要です）
-[![Image from Gyazo](https://i.gyazo.com/be3466b20399db3de970d461fac93e59.gif)](https://gyazo.com/be3466b20399db3de970d461fac93e59)
+[![Image from Gyazo](https://i.gyazo.com/54a28763716091f444fbd74ddcfbadba.gif)](https://gyazo.com/54a28763716091f444fbd74ddcfbadba)
 ## 計画詳細画面への遷移
 [![Image from Gyazo](https://i.gyazo.com/649571211ff90a27ab9ec0bf9f00ff42.gif)](https://gyazo.com/649571211ff90a27ab9ec0bf9f00ff42)
 ## 計画投稿画面への遷移
