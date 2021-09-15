@@ -24,7 +24,7 @@ ID:admin Pass:7777
 ## TOP画面での閲覧（詳細はユーザー登録が必要です）
 [![Image from Gyazo](https://i.gyazo.com/54a28763716091f444fbd74ddcfbadba.gif)](https://gyazo.com/54a28763716091f444fbd74ddcfbadba)
 ## 計画詳細画面への遷移
-[![Image from Gyazo](https://i.gyazo.com/649571211ff90a27ab9ec0bf9f00ff42.gif)](https://gyazo.com/649571211ff90a27ab9ec0bf9f00ff42)
+[![Image from Gyazo](https://i.gyazo.com/54a28763716091f444fbd74ddcfbadba.gif)](https://gyazo.com/54a28763716091f444fbd74ddcfbadba)
 ## 計画投稿画面への遷移
 [![Image from Gyazo](https://i.gyazo.com/670db32bed2c0d5b755abf7123ccd5f7.gif)](https://gyazo.com/670db32bed2c0d5b755abf7123ccd5f7)
 ## 計画への補足提案(非同期通信)
