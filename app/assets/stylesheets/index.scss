@@ -1,11 +1,10 @@
 .plan-index{
   color: white;
-  background: linear-gradient(#000046, #1cb5e0);
+  background-image: linear-gradient(180deg, rgba(15, 87, 222, 1), rgba(61, 156, 194, 1) 50%, rgba(136, 139, 215, 1) 97%, rgba(197, 125, 233, 1));
   font-weight: bold;
   font-size: x-large;
   text-align: center;
 }
-
 
 
 .plan-contents {
@@ -32,50 +31,78 @@
   color: #3ccace;
   font-weight: bold;
 }
+.item-img-content{
+  overflow: visible;
+  object-fit: contain;
+  border-radius: 5px;
+  background-image: url("wood.png");
+}
+
+.count-click{
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
 
 .plan-lists {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  text-align: center;
 }
+
 
 .plan-lists>.list {
   width: 37vh;
   padding: 1vw;
   background-color: #FFF;
+  display: block;
 }
-
 
 .list > .plan-img-content {
   position: relative;
+  object-fit: cover;
 }
 
 .plan-img {
   width: 33vh;
   height: 33vh;
   border-radius: 5px;
+  display: block;
+  text-align: center;
+  object-fit: scale-down;
+  margin: 0 auto;
 }
-
+.slick-track{
+  border-radius: 5px;
+  height: 33vh;
+  object-fit: contain;
+  border-radius: 5px;
+}
 
 .plan-info {
   background-color:lightgray;
   color: black;
-  width: 33vh;
+  // width: 33vh;
   border-radius: 5px;
+  border: 1px solid darkgray;
 }
 
 .plan-name {
   font-size: 2.5vh;
+  border-bottom: 1px solid white;
 }
 .item-img{
   width: 33vh;
   height: 33vh;
   border-radius: 5px;
+  display: block;
 }
 
 
 .star-btn {
+  border-top:1px solid white;
   display: flex;
   align-items: center;
 }

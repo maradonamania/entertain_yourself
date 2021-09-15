@@ -22,11 +22,11 @@ ID:admin Pass:7777
 # DEMO
 
 ## TOP画面での閲覧（詳細はユーザー登録が必要です）
-[![Image from Gyazo](https://i.gyazo.com/f7833fe766d4522a9a6d61ba3804f933.gif)](https://gyazo.com/f7833fe766d4522a9a6d61ba3804f933)
-## 詳細画面への遷移
-[![Image from Gyazo](https://i.gyazo.com/373880328e7ced2dc3f843392a488d20.gif)](https://gyazo.com/373880328e7ced2dc3f843392a488d20)
+[![Image from Gyazo](https://i.gyazo.com/be3466b20399db3de970d461fac93e59.gif)](https://gyazo.com/be3466b20399db3de970d461fac93e59)
+## 計画詳細画面への遷移
+[![Image from Gyazo](https://i.gyazo.com/649571211ff90a27ab9ec0bf9f00ff42.gif)](https://gyazo.com/649571211ff90a27ab9ec0bf9f00ff42)
 ## 計画投稿画面への遷移
-[![Image from Gyazo](https://i.gyazo.com/09b47feeaa07a2a71e7b7beb41eab9cb.gif)](https://gyazo.com/09b47feeaa07a2a71e7b7beb41eab9cb)
+[![Image from Gyazo](https://i.gyazo.com/670db32bed2c0d5b755abf7123ccd5f7.gif)](https://gyazo.com/670db32bed2c0d5b755abf7123ccd5f7)
 ## 計画への補足提案(非同期通信)
 [![Image from Gyazo](https://i.gyazo.com/fe34c5abc7c43390445c4d03c4813574.gif)](https://gyazo.com/fe34c5abc7c43390445c4d03c4813574)
 ## 「いいね」機能(非同期通信)

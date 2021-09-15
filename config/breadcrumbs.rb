@@ -47,6 +47,11 @@ crumb :user_login do
   parent :root
 end
 
+crumb :my_page do |user|
+  link "マイページ",user_path(current_user.id)
+  parent :root
+end
+
 crumb :user_page do |user|
   link "ユーザーページ",user_path(user.id)
   parent :root

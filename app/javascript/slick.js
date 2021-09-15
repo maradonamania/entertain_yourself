@@ -2,7 +2,7 @@ $(function() {
   $('.current-user-image-box').slick({
       dots: true, 
       autoplay: true, 
-      autoplaySpeed: 4000, 
+      autoplaySpeed: 3000, 
       slidesToShow: 3,   
 
       responsive: [{
@@ -12,7 +12,6 @@ $(function() {
           slidesToScroll: 2,
         }
       }, {
-
         breakpoint: 580,
         settings: {
           slidesToShow: 1,
@@ -21,4 +20,9 @@ $(function() {
       }
       }]
   });
+  $('.item-img-content').slick({
+    dots: true, 
+    slidesToShow: 1,   
+    slidesToScroll: 1,
+});
 });

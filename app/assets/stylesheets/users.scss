@@ -9,7 +9,9 @@
   margin: 30px auto;
   display: flex;
   flex-direction: column;
+  border: 1px solid darkgray;
 }
+
 .name{
   color: white;
   font-size: large;
@@ -28,6 +30,7 @@
 }
 .location{
   text-align: center;
+  border-radius: 0 0 5px 5px;
 }
 .current-user-name{
   color: white;

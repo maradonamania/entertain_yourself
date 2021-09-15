@@ -1,6 +1,10 @@
 <%= render "shared/header" %>
 
+<%if current_user.id == @user.id%>
+<% breadcrumb :my_page,@user %>
+<%else%>
 <% breadcrumb :user_page,@user %>
+<%end%>
 
 <div class="contents row">
   <p class="current-user-name"><%= @user.nickname %>さんの投稿一覧</p>
@@ -12,10 +16,14 @@
     <div class="content_post">
       <span class="name">提案名：<%=link_to plan.name,plan_path(plan.id) %></span>
       <ul class="current-user-image-box">
+      <%if plan.images.attached?%>
       <% plan.images.each do |image| %>
       <li>
-      <%= image_tag image, class:"current-user-image" if plan.images.attached? %>
+      <%= image_tag image, class:"current-user-image" %>
       </li>
+      <%end%>
+      <%else%>
+      <%= image_tag "camera-logo.png",class:"current-user-image"%>
       <% end %>
       </ul>
       <p class="contents-detail">詳細：<%= plan.description %></p>
