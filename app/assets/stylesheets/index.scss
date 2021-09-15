@@ -8,7 +8,7 @@
 
 
 .plan-contents {
-  background-image: url('06-white-cardboard.png');
+  background-image: image-url('06-white-cardboard.png');
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +35,7 @@
   overflow: visible;
   object-fit: contain;
   border-radius: 5px;
-  background-image: url("wood.png");
+  background-image: image-url("wood.png");
 }
 
 .count-click{
