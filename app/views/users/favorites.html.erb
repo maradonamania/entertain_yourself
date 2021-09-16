@@ -17,7 +17,7 @@
           <%= image_tag image,class: "plan-img" %>
         <%end%>
         <% else %>
-          <%= link_to image_tag("camera-logo.png",class:"plan-img"),"plans/#{plan.id}" %>
+          <%= image_tag "camera-logo.png",class:"plan-img"%>
         <% end %>      
         </div>
         <div class='plan-info'>
@@ -25,7 +25,7 @@
             <%= plan.name %>
           </div>
           <div class='plan-price'>
-            <span>予算<%= plan.budget.name %><br><%= plan.expected_time.name %></span>
+            <span>予算：<%= plan.budget.name %><br>時間：<%= plan.expected_time.name %></span>
             <div class='star-btn'>
               <%= image_tag "star5.png", class:"star-icon" %>
               <span class='star-count'><%= plan.likes.count %></span><span class="count-click"><%=plan.user.nickname%></span>
