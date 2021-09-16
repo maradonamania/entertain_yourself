@@ -82,7 +82,7 @@
       <div id="favorite-btn_<%=@plan.id%>">
         <%= render partial: 'shared/like', locals: {plan: @plan} %>
       </div>
-      <div class='star-btn'>
+      <div id='star-btn_<%=@plan.id%>'>
         <%= render partial: 'shared/favorites', locals:{plan: @plan,user: @user} %>
       </div>
   </div>

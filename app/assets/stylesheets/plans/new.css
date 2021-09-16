@@ -39,6 +39,9 @@
   font-size: 12px;
   font-weight: bold;
 }
+.indispensable.blue{
+  background: blue;
+}
 
 .weight-bold-text {
   font-weight: bold;

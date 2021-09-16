@@ -1,10 +1,10 @@
 <%if Favorite.exists?(plan_id: plan.id)%>
-  <%= link_to plan_favorite_path(plan.id,user.id),class:"bookmark-icon",method: :delete do %>
+  <%= link_to plan_favorite_path(plan.id,user.id),class:"bookmark-icon",method: :delete,remote: true do %>
   <%= image_tag "bookmark2.png",width:"20",height:"20"%>
   <span>お気に入りから削除</span>
   <%end%>
 <% else %>
-  <%= link_to plan_favorites_path(plan.id),class:"bookmark-icon",method: :post do%>
+  <%= link_to plan_favorites_path(plan.id),class:"bookmark-icon",method: :post,remote: true do%>
   <%=image_tag "bookmark.png",width:"20",height:"20" %>
   <span>お気に入りに追加</span>
   <%end%>

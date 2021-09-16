@@ -41,8 +41,10 @@ ID:admin Pass:7777
 [![Image from Gyazo](https://i.gyazo.com/398897c6feb3ccfb7dd915f77ba8fc02.gif)](https://gyazo.com/398897c6feb3ccfb7dd915f77ba8fc02)
 ## パンくずリスト機能
 [![Image from Gyazo](https://i.gyazo.com/4786befc80a94d539e8b41a982ea96b7.gif)](https://gyazo.com/4786befc80a94d539e8b41a982ea96b7)
-## 計画お気に入り登録機能/お気に入り計画一覧画面
+## 計画お気に入り登録機能(非同期)/お気に入り計画一覧画面
+[![Image from Gyazo](https://i.gyazo.com/fc7420d793495d3ac5ba30b757d01b37.gif)](https://gyazo.com/fc7420d793495d3ac5ba30b757d01b37)
 [![Image from Gyazo](https://i.gyazo.com/81391a3de094a7c3d3453853fa627fc8.gif)](https://gyazo.com/81391a3de094a7c3d3453853fa627fc8)
+
 
 # テーブル設計
 

@@ -11,9 +11,11 @@
           <%= link_to plan_path(plan) do %>
           <div class='item-img-content'>
           <%if plan.images.attached?%>
-            <%= image_tag plan.images[0],class: "plan-img" %>
+          <% plan.images.each do |image|%>
+            <%= image_tag image,class: "plan-img" %>
+          <%end%>
           <% else %>
-            <%= link_to image_tag("camera-logo.png",class:"plan-img"),"plans/#{plan.id}" %>
+            <%= image_tag "camera-logo.png",class:"plan-img" %>
           <% end %>      
           </div>
           <div class='plan-info'>
@@ -25,6 +27,11 @@
               <div class='star-btn'>
                 <%= image_tag "star5.png", class:"star-icon" %>
                 <span class='star-count'><%= plan.likes.count %></span>
+                <%if plan.user_id == current_user.id%>
+              <span class="count-click-mine">御自身の投稿です</span>
+              <%else%>
+              <span class="count-click">クリックして詳細へ</span>
+              <%end%>
               </div>
             </div>
           </div>

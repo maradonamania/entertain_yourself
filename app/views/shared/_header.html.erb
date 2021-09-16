@@ -39,7 +39,7 @@
         <li class="follow-count">(フォロー中：<%=link_to "#{current_user.followings.count}",followings_user_path(current_user.id),class:"follow-count-link"%> フォロワー：<%=link_to "#{current_user.followers.count}",followers_user_path(current_user.id),class:"follow-count-link"%> )
         </li>
         <li class="follow-count">
-          お気に入り計画：<%= link_to "#{current_user.favorites.count}",favorites_user_path(current_user.id),class:"follow-count-link"%>
+          <%= link_to "お気に入り計画一覧",favorites_user_path(current_user.id),class:"follow-count-link"%>
         </li>
 
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>

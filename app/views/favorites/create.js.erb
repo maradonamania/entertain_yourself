@@ -1,0 +1,1 @@
+$('#star-btn_<%=@plan.id%>').html("<%= j(render partial: 'shared/favorites', locals: {plan: @plan,user: current_user}) %>");

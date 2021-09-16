@@ -26,9 +26,13 @@
       <%= image_tag "camera-logo.png",class:"current-user-image"%>
       <% end %>
       </ul>
-      <p class="contents-detail">詳細：<%= plan.description %></p>
+      <div class='box-description'>
+      <%= link_to plan_path(plan.id) do %>
+      <p class="contents-detail description">詳細：<%= plan.description %></p>
       <p class="contents-detail genre">ジャンル：<%= plan.genre.name %></P>
       <p class="contents-detail location">場所：<%= plan.location.name%></P>
+      <%end%>
+      </div>
     </div>
   <% end %>
 </div>

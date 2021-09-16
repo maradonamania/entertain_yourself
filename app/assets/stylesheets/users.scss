@@ -22,10 +22,19 @@
 .name > a {
   color: white;
 }
-.contents-detail{
-  border: 1px solid white;
+.box-description{
+  border: 1px solid darkgray;
+  border-radius: 5px;
+}
+// .contents-detail{
+//   border-bottom: 1px solid white;
+// }
+.description{
+  border-bottom: 1px solid white;
+  text-align: center;
 }
 .genre{
+  border-bottom: 1px solid white;
   text-align: center;
 }
 .location{
@@ -46,7 +55,7 @@
   background-color: rgb(205, 202, 202);
   object-fit: contain;
   margin: 0 5px 0;
-  background-image: url("wood.png");
+  background-image: image-url("wood.png");
   margin:0 auto;
 }
 .current-user-edit{
