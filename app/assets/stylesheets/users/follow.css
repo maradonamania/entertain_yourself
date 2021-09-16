@@ -7,6 +7,9 @@
   font-size: x-large;
   margin-bottom: 10px;
 }
+.following-detail{
+  margin-bottom: 5vh;
+}
 .follower-name{
   width: 100%;
   text-align: center;
