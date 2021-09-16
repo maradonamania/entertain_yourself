@@ -1,4 +1,4 @@
-<%if Favorite.exists?(plan_id: plan.id)%>
+<%if Favorite.exists?(plan_id: plan.id,user_id: user.id)%>
   <%= link_to plan_favorite_path(plan.id,user.id),class:"bookmark-icon",method: :delete,remote: true do %>
   <%= image_tag "bookmark2.png",width:"20",height:"20"%>
   <span>お気に入りから削除</span>
