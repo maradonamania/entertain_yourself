@@ -47,7 +47,7 @@
 .count-click-mine{
   margin: 0 auto;
   text-align: center;
-  color: darkgray;
+  color: darkolivegreen;
   margin: 0 auto;
 }
 
@@ -96,6 +96,10 @@
   border-radius: 5px;
   border: 1px solid darkgray;
   // align-items: center;
+  transition: background-color 1s;
+}
+.plan-info:hover{
+  background-color:darkgray;
 }
 
 .plan-name {

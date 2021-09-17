@@ -34,9 +34,9 @@
               <%= image_tag "star5.png", class:"star-icon" %>
               <span class='star-count'><%= plan.likes.count %></span>
               <%if plan.user == current_user%>
-              <span class="count-click-mine">御自身の投稿です</span>
+              <span class="count-click-mine" >御自身の投稿です</span>
               <%else%>
-              <span class="count-click">クリックして詳細へ</span>
+              <span class="count-click" ><%=plan.user.nickname%></span>
               <%end%>
             </div>
           </div>
