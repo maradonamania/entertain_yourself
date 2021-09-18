@@ -126,6 +126,7 @@
   display: flex;
   justify-content: center;
 }
+
 .option {
   display: flex;
   justify-content: space-between;
@@ -134,7 +135,7 @@
 }
 
 .favorite-star-icon {
-  display: block;
+  display: inline-block;
   border-radius: 5px;
   width: 15vw;
   min-width: 200px;
@@ -145,14 +146,25 @@
   align-items: center;
   margin-right: 20px;
   background-color: ivory;
+  transition: .1s;
 }
+
+.favorite-star-icon:active{
+  -webkit-transform: rotateX(360deg);
+  transform: rotateX(360deg);
+}
+.favorite-star-icon:hover{
+  box-shadow: 0 1px 1px 1px #979696;
+  border: 1px solid goldenrod;
+}
+
 .favorite-star-icon > span{
   margin-left: 5px;
 }
+
 .good2{
   color:gray;
 }
-
 .bookmark-icon{
   display: block;
   border-radius: 5px;
@@ -165,6 +177,15 @@
   align-items: center;
   margin-right: 20px;
   background-color: ivory;
+  transition: .1s;
+}
+.bookmark-icon:active{
+  -webkit-transform: rotateX(360deg);
+  transform: rotateX(360deg);
+}
+.bookmark-icon:hover{
+  box-shadow: 1px 1px 1px 0 #979696;
+  border: 1px solid goldenrod;
 }
 .bookmark-icon > span{
   margin-left: 5px;
@@ -224,9 +245,17 @@
   min-width: 150px;
   font-size: 18px;
   border-radius: 5px;
+  margin-top:2vh;
   margin-bottom: 2vh;
+  
 }
-
+.supplement-btn:hover{
+  background:#fff;
+  color:#3CCACE;
+}
+.supplement-btn:active{
+  transform: scale(1.1);
+}
 .supplement-flag {
   display: flex;
   justify-content: center;
@@ -280,6 +309,13 @@
   display: block;
   text-align: center;
   border-top: 2px solid white;
+  transition: 1s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.following-nickname:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 .notice{
   text-align: center;

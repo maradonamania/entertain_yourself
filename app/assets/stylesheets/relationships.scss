@@ -18,6 +18,13 @@
   font-weight: bold;
   object-fit: contain;
   height: 36px;
+  transition: 1s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.btn-block:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 @media (min-width: 700px){
 .btn-block{

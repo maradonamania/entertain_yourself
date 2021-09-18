@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 <% breadcrumb :favorite_list,@user %>
 <p class="favorite-list-title">
-  <%="#{current_user.nickname}さんのお気に入り一覧：登録数#{current_user.favorites.count}"%>
+  <%="#{current_user.nickname}さんのお気に入り一覧(登録数:#{current_user.favorites.count})"%>
 </p>
 <div class="following-detail">
   <%= link_to "#{@user.nickname}さんの投稿一覧", user_path(@user.id), class: "following-nickname" %>
@@ -10,7 +10,7 @@
     <% if @favorite_list.present? %>
       <% @favorite_list.each do |plan|%>
       <li class='list'>
-        <%= link_to plan_path(plan) do %>
+        
         <div class='item-img-content'>
         <%if plan.images.attached?%>
         <% plan.images.each do |image|%>
@@ -20,6 +20,7 @@
           <%= image_tag "camera-logo.png",class:"plan-img"%>
         <% end %>      
         </div>
+        <%= link_to plan_path(plan) do %>
         <div class='plan-info'>
           <div class='plan-name'>
             <%= plan.name %>

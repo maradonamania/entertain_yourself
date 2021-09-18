@@ -60,6 +60,11 @@
   width: 20vh;
   vertical-align: bottom;
   border-radius: 5px;
+  margin-bottom: 2px;
+}
+.logo-white:hover{
+  transform: scale(1.1);
+  transition-duration: 0.5s;
 }
 
 .footer>p {

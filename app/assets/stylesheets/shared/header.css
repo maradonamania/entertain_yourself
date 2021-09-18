@@ -66,7 +66,12 @@
   background-color: blue;
   cursor: pointer;
   border: none;
+  transition: border .5s;
 }
+.search-button:hover{
+  border: 1px solid white;
+}
+
 .search-icon {
   background-color: blue;
   border: none;
@@ -76,12 +81,23 @@
   font-weight: bold;
   justify-content: center;
 }
+.user-nickname {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+}
+
 .follow-count{
   color: white;
 }
 .follow-count-link{
   color: yellowgreen;
   font-weight: bold;
+  transition: color 1s;
+}
+.follow-count-link:hover{
+  color: steelblue;
 }
 @media (min-width: 1125px) {
 .top-page-header {
@@ -183,19 +199,17 @@
   list-style: none;
   align-items: flex-end;
 }
-
-
 .user-nickname {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
+  font-size: x-large;
 }
-
 
 .logout {
   text-decoration: none;
   color: white;
+  transition: color .5s;
+  font-weight: bold;
 }
+
 
 .login {
   text-decoration: none;

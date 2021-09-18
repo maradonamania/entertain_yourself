@@ -3,28 +3,37 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .content_post{
-  background-color: lightgray;
   border-radius: 5px;
   width: 80vw;
   margin: 30px auto;
   display: flex;
   flex-direction: column;
-  border: 1px solid darkgray;
+  border: 2px solid darkgray;
 }
-
 .name{
-  color: white;
+  color: darkslategray;
   font-size: large;
   font-weight: bold;
   text-align: center;
-  
+  background-color: white;
 }
 .name > a {
-  color: white;
+  color: darkslategray;
+  transition: color 1s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.name > a:hover{
+  color: lightseagreen;
 }
 .box-description{
   border: 1px solid darkgray;
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
+  background-color: lightgray;
+  transition: background-color 1s;
+}
+.box-description:hover{
+  background-color: grey;
 }
 // .contents-detail{
 //   border-bottom: 1px solid white;
@@ -32,6 +41,7 @@
 .description{
   border-bottom: 1px solid white;
   text-align: center;
+  transition: background-color 1s;
 }
 .genre{
   border-bottom: 1px solid white;
@@ -56,8 +66,13 @@
   object-fit: contain;
   margin: 0 5px 0;
   background-image: image-url("wood.png");
+  align-items: center;
   margin:0 auto;
 }
+.current-user-image-box{
+  background-color: rgb(178, 204, 236);
+}
+
 .current-user-edit{
   color: white;
   background: linear-gradient( to right,  rgba(69,179,224,1) 25%, rgba(102,51,153,1) 75% );
@@ -66,6 +81,13 @@
   text-align: center;
   display: block;
   border-top: 2px solid white;
+  transition: 1s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.current-user-edit:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 .current-user-image-box{
   display:flex;
@@ -73,7 +95,7 @@
 }
 .slick-dots{
   justify-content: center;
-  
+  background-color: white;
 }
 .slick-next {
   right: 10px !important;
