@@ -28,6 +28,11 @@
       </ul>
       <div class='box-description'>
       <%= link_to plan_path(plan.id) do %>
+      <div><%= image_tag "star5.png", class:"star-icon" %>
+      <span class='star-count'><%= plan.likes.count %></span>
+      <%=image_tag "bookmark.png",width:"20",height:"20" %>
+      <span class='star-count'><%=plan.favorites.count%></span>
+      </div>
       <p class="contents-detail description">詳細：<%= plan.description %></p>
       <p class="contents-detail genre">ジャンル：<%= plan.genre.name %></P>
       <p class="contents-detail location">場所：<%= plan.location.name%></P>
