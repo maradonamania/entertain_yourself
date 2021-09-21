@@ -2,14 +2,20 @@
   display: flex;
   height: 5vh;
   text-align: center;
-  background-color: lightseagreen;
+  background-image: radial-gradient(circle, rgba(58, 99, 255, 1), rgba(42, 179, 252, 1) 90%);
   color: white;
   font-weight: bold;
-  font-size: x-large;
+  font-size: large;
   overflow: hidden;
 }
 .ranking-index{
   align-items: center;
+}
+.ranking-name{
+  transition: 1s;
+}
+.ranking-name:hover{
+  color:rgba(61, 156, 194, 1);
 }
 
 .plan-index{
@@ -238,4 +244,10 @@
   width: 80%;
   border-radius: 5px;
   border: 1px solid lightgray;
+}
+@media (min-width: 930px){
+  
+.ranking-box{
+  font-size: x-large;
+}
 }

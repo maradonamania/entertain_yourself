@@ -1,21 +1,5 @@
 <%= render "shared/header" %>
   <%# 計画一覧 %>
-<div class="ranking-box">
-<% @rankings.each.with_index(1) do |ranking, i| %>
-<div class="ranking-index">
-  <span class="ranking-content">
-  いいね数トップ３：
-  第<%= i %>位
-  </span>
-  <span class="ranking-name">
-  「<%=link_to ranking.name, plan_path(ranking) %>」
-  </span>
-  <span class="ranking-nickname">
-  [<%= ranking.user.nickname%>]
-  </span>
-</div>
-<% end %>
-</div>
 <p class="plan-index">新規提案一覧</p>
 <div class='plan-contents'>
 
@@ -95,6 +79,22 @@
     </li>
     <% end %>
   </ul>
+</div>
+  <div class="ranking-box">
+<% @rankings.each.with_index(1) do |ranking, i| %>
+<div class="ranking-index">
+  <span class="ranking-content">
+  いいね数トップ３：
+  第<%= i %>位
+  </span>
+  <span class="ranking-name">
+  「<%=link_to ranking.name, plan_path(ranking),class:"ranking-name" %>」
+  </span>
+  <span class="ranking-nickname">
+  [<%= ranking.user.nickname%>]
+  </span>
+</div>
+<% end %>
 </div>
 
 <%= link_to(new_plan_path, class: 'submit-btn') do %>
