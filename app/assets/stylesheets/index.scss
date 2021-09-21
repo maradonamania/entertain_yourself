@@ -1,3 +1,17 @@
+.ranking-box{
+  display: flex;
+  height: 5vh;
+  text-align: center;
+  background-color: lightseagreen;
+  color: white;
+  font-weight: bold;
+  font-size: x-large;
+  overflow: hidden;
+}
+.ranking-index{
+  align-items: center;
+}
+
 .plan-index{
   color: white;
   background-image: linear-gradient(180deg, rgba(15, 87, 222, 1), rgba(61, 156, 194, 1) 50%, rgba(136, 139, 215, 1) 97%, rgba(197, 125, 233, 1));

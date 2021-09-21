@@ -25,4 +25,10 @@ $(function() {
     slidesToShow: 1,   
     slidesToScroll: 1,
 });
+
+  $('.ranking-box').slick({
+    autoplaySpeed: 3000,
+    slidesToShow: 1,   
+    slidesToScroll: 1,
+  });
 });

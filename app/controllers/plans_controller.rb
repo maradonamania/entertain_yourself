@@ -7,6 +7,7 @@ class PlansController < ApplicationController
   def index
     user = current_user
     @plans = Plan.all.order('created_at DESC')
+    @rankings = Plan.find(Like.group(:plan_id).order('count(plan_id) DESC').limit(3).pluck(:plan_id))
   end
 
   def new
