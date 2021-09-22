@@ -34,9 +34,9 @@ ID:admin Pass:7777
 ## 計画検索機能(条件などの詳細設定可能)
 [![Image from Gyazo](https://i.gyazo.com/68b2e9b84d747e66303aaa8fe3bba7cf.gif)](https://gyazo.com/68b2e9b84d747e66303aaa8fe3bba7cf)
 ## ユーザー詳細画面への遷移/ユーザー情報編集ページへの遷移
-[![Image from Gyazo](https://i.gyazo.com/634c923e26bb1170ad152050c1edbe49.gif)](https://gyazo.com/634c923e26bb1170ad152050c1edbe49)
+[![Image from Gyazo](https://i.gyazo.com/be015dddf28ce0d52159dd0fc9e142bf.gif)](https://gyazo.com/be015dddf28ce0d52159dd0fc9e142bf)
 ## ユーザー投稿一覧
-[![Image from Gyazo](https://i.gyazo.com/eebe59855c88cd20340edc2e7e2c63d1.gif)](https://gyazo.com/eebe59855c88cd20340edc2e7e2c63d1)
+[![Image from Gyazo](https://i.gyazo.com/a42d7de0232435766d93353bad68243f.gif)](https://gyazo.com/a42d7de0232435766d93353bad68243f)
 ## フォロー機能/フォロー、フォロワー詳細ページ表示
 [![Image from Gyazo](https://i.gyazo.com/398897c6feb3ccfb7dd915f77ba8fc02.gif)](https://gyazo.com/398897c6feb3ccfb7dd915f77ba8fc02)
 ## パンくずリスト機能
