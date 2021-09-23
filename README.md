@@ -45,7 +45,7 @@ ID:admin Pass:7777
 [![Image from Gyazo](https://i.gyazo.com/fc7420d793495d3ac5ba30b757d01b37.gif)](https://gyazo.com/fc7420d793495d3ac5ba30b757d01b37)
 [![Image from Gyazo](https://i.gyazo.com/81391a3de094a7c3d3453853fa627fc8.gif)](https://gyazo.com/81391a3de094a7c3d3453853fa627fc8)
 
-##いいね数ランキング表示
+## いいね数ランキング表示
 [![Image from Gyazo](https://i.gyazo.com/86c68b42db9a053fb6bb592aa5f4740c.gif)](https://gyazo.com/86c68b42db9a053fb6bb592aa5f4740c)
 
 # テーブル設計
