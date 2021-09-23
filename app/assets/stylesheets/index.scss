@@ -1,16 +1,13 @@
 .ranking-box{
   display: flex;
   height: 5vh;
+  justify-content: center;
   text-align: center;
   background-image: radial-gradient(circle, rgba(58, 99, 255, 1), rgba(42, 179, 252, 1) 90%);
   color: white;
   font-weight: bold;
-  font-size: x-large;
+  font-size: large;
   overflow: hidden;
-}
-.ranking-index{
-  // align-items: center;
-  text-align: center;
 }
 .ranking-name{
   transition: 1s;
@@ -249,6 +246,6 @@
 @media (min-width: 930px){
   
 .ranking-box{
-  font-size: xx-large;
+  font-size: x-large;
 }
 }
