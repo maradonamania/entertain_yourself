@@ -224,10 +224,11 @@
   transition: opacity 1s;
   opacity: .8;
   -webkit-transition: none;
-  transition: none;
+  transition: border .8s;
 }
 .submit-btn:hover{
   opacity: 1;
+  border: 1px solid darkgray;
 }
 
 .submit-btn-text {
