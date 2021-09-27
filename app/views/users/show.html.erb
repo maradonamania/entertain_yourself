@@ -7,7 +7,7 @@
 <%end%>
 
 <div class="contents row">
-  <p class="current-user-name"><%= @user.nickname %>さんの投稿一覧</p>
+  <p class="current-user-name"><%= @user.nickname %>さんの計画一覧</p>
   <%= render "relationships/follow_button", locals:{ user: @user} %>
   <%if current_user.id == @user.id%>
   <%= link_to "#{@user.nickname}さんのユーザー情報を編集する",edit_user_path(@user.id),class:"current-user-edit" %>
