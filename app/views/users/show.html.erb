@@ -3,7 +3,9 @@
 <%if current_user.id == @user.id%>
 <% breadcrumb :my_page,@user %>
 <%else%>
+<%# パンくずリスト %>
 <% breadcrumb :user_page,@user %>
+<%# パンくずリスト %>
 <%end%>
 
 <div class="contents row">
