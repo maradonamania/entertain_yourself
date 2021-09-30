@@ -1,6 +1,7 @@
 <%#app/assets/stylesheets/s/new.css %>
+<%# パンくずリスト %>
 <% breadcrumb :user_edit, @user %>
-
+<%# パンくずリスト %>
 <div class='body'>
 <%= form_with model: @user,class: 'registration-main mt-5' ,method: :put,local: true do |f|%>
 <div class='form-wrap'>

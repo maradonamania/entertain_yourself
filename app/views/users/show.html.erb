@@ -1,7 +1,9 @@
 <%= render "shared/header" %>
 
 <%if current_user.id == @user.id%>
+<%# パンくずリスト %>
 <% breadcrumb :my_page,@user %>
+<%# パンくずリスト %>
 <%else%>
 <%# パンくずリスト %>
 <% breadcrumb :user_page,@user %>

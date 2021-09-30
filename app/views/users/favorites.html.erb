@@ -1,5 +1,7 @@
 <%= render "shared/header" %>
+<%# パンくずリスト %>
 <% breadcrumb :favorite_list,@user %>
+<%# パンくずリスト %>
 <p class="favorite-list-title">
   <%="#{current_user.nickname}さんのお気に入り一覧(登録数:#{current_user.favorites.count})"%>
 </p>
