@@ -96,9 +96,10 @@
 </div>
 <% end %>
 </div>
-
+<%# 提案ボタン %>
 <%= link_to(new_plan_path, class: 'submit-btn') do %>
   <span class='submit-btn-text'>提案する</span>
   <%= image_tag 'plan-submit-logo.png' , size: '185x50' ,class: "submit-btn-icon" %>
 <% end %>
+<%# 提案ボタン %>
 <%= render "shared/footer" %>
