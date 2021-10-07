@@ -1,3 +1,4 @@
+<%# フォローボタン %>
 <% unless current_user.id == @user.id %>
 <div class="follow-button">
   <% if current_user.following?(@user) %>
