@@ -81,10 +81,14 @@
   <div class="option-box">
   <div class="option">
       <div id="favorite-btn_<%=@plan.id%>">
+      <%# いいねボタン %>
         <%= render partial: 'shared/like', locals: {plan: @plan} %>
+      <%# いいねボタン %>
       </div>
       <div id='star-btn_<%=@plan.id%>'>
+      <%# お気に入りボタン %>
         <%= render partial: 'shared/favorites', locals:{plan: @plan,user: @user} %>
+      <%# お気に入りボタン %>
       </div>
   </div>
   </div>
