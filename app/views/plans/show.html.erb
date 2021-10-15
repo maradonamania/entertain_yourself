@@ -36,10 +36,12 @@
     <div class="plan-edit-box">
       <% if user_signed_in? %>
       <% if current_user.id == @plan.user_id %>
-
+      <%# 提案編集ボタン %>
       <%= link_to "提案を編集", edit_plan_path(@plan.id), method: :get, class: "plan-green-btn" %>
-      
+      <%# 提案編集ボタン %>
+      <%# 提案削除ボタン %>
       <%= link_to "提案を削除", plan_path(@plan.id), method: :delete, class:"plan-destroy" %>
+      <%# 提案削除ボタン %>
       <% end %>
       <% end %>
     </div>
