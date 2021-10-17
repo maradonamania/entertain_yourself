@@ -15,9 +15,12 @@
     <%=link_to 'トップページへもどる',"/",class:"about-link"%>
   <%else%>
     <p>さっそくユーザー登録して提案してみましょう</p><br>
+    <%# 新規登録ページリンク %>
     <%=link_to '新規登録',new_user_registration_path,class:"about-link"%><br>
-
+    <%# 新規登録ページリンク %>
+    <%# ログインボタン %>
     <%= link_to 'ログイン', new_user_session_path,class:"about-link" %>
+    <%# ログインボタン %>
   <%end%>
   </div>
 </div>
