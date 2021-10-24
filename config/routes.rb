@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'
       get 'about'
+      get 'guide'
     end
     resources :favorites, only:[:create,:destroy]
     resources :supplements, only: :create
